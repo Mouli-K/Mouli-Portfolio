@@ -1,6 +1,6 @@
 /**
  * MOULISH KUMAR R - MECHANICAL DESIGN ENGINEER PORTFOLIO
- * Page Flow Controller: Staggered Scroll Reveal, Scroll Progress, Active Nav Highlighting
+ * Page Flow Controller: Staggered Scroll Reveal, Scroll Progress, Active Nav Highlighting, Responsive Mobile/Tablet Drawer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,13 +51,13 @@ function initFlowReveal() {
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     elements.forEach((el, index) => {
       // Add subtle stagger delay for sibling cards
-      const delay = (index % 4) * 0.08;
+      const delay = (index % 4) * 0.06;
       el.style.transitionDelay = `${delay}s`;
       observer.observe(el);
     });
@@ -93,17 +93,17 @@ function initNavigationHighlight() {
 }
 
 /* ==========================================================================
-   4. Mobile Menu Toggle
+   4. Responsive Mobile & Tablet Drawer
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-nav-drawer');
   if (!toggleBtn || !mobileMenu) return;
 
-  toggleBtn.addEventListener('click', () => {
-    const isHidden = mobileMenu.classList.contains('hidden');
-    if (isHidden) {
+  function setMenuState(open) {
+    if (open) {
       mobileMenu.classList.remove('hidden');
+      toggleBtn.setAttribute('aria-expanded', 'true');
       toggleBtn.innerHTML = `
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -111,11 +111,37 @@ function initMobileMenu() {
       `;
     } else {
       mobileMenu.classList.add('hidden');
+      toggleBtn.setAttribute('aria-expanded', 'false');
       toggleBtn.innerHTML = `
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       `;
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    setMenuState(!isOpen);
+  });
+
+  // Automatically close drawer when any link is clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+
+  // Close when tapping outside the menu
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+      setMenuState(false);
+    }
+  });
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+      setMenuState(false);
     }
   });
 }
