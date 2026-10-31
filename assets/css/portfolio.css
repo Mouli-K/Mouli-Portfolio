@@ -1,7 +1,7 @@
 /* ==========================================================================
-   MOULISH KUMAR R - MECHANICAL DESIGN & NPD PORTFOLIO
-   Design System: Kinetic Blueprint 2.0 (Precision Light Mode)
-   Fonts: Plus Jakarta Sans (Display), Inter (Body), JetBrains Mono (Technical)
+   MOULISH KUMAR R - MECHANICAL DESIGN ENGINEER RESUME & PORTFOLIO
+   Design Theme: Precision Light Mode (Professional & Job-Seeking Focused)
+   Typography: Plus Jakarta Sans (Display), Inter (Body), JetBrains Mono (Technical)
    ========================================================================== */
 
 :root {
@@ -9,30 +9,17 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Color Palette - Precision Mechanical Blueprint Light Mode */
+  /* Clean Light Palette */
   --color-canvas: #f8fafc;
   --color-surface: #ffffff;
   --color-surface-subtle: #f1f5f9;
-  --color-surface-muted: #e2e8f0;
-  --color-surface-dark: #0f172a;
-  
-  --color-primary: #0284c7;        /* Blueprint Cobalt */
+  --color-primary: #0284c7;
   --color-primary-dark: #0369a1;
-  --color-primary-light: #e0f2fe;
-  --color-primary-focus: rgba(2, 132, 199, 0.15);
-
-  --color-secondary: #0f172a;      /* Machined Carbon */
   --color-text-main: #0f172a;
   --color-text-muted: #475569;
   --color-text-dim: #64748b;
-
   --color-border: #e2e8f0;
   --color-border-strong: #cbd5e1;
-  
-  --color-success: #059669;
-  --color-success-bg: #ecfdf5;
-  --color-accent-amber: #d97706;
-  --color-accent-amber-bg: #fffbeb;
 }
 
 body {
@@ -48,52 +35,48 @@ body {
 
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 .font-mono {
   font-family: var(--font-mono);
 }
 
-/* Subtle Blueprint Drafting Matrix */
+/* Subtle, clean drafting grid */
 .bg-blueprint-grid {
   background-image: 
-    radial-gradient(circle, rgba(15, 23, 42, 0.07) 1px, transparent 1px),
-    linear-gradient(to right, rgba(2, 132, 199, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(2, 132, 199, 0.03) 1px, transparent 1px);
-  background-size: 24px 24px, 120px 120px, 120px 120px;
+    radial-gradient(circle, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-.bg-blueprint-subtle {
-  background-image: radial-gradient(circle, rgba(2, 132, 199, 0.09) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* Apple-style Hello Intro Overlay */
+/* ==========================================================================
+   APPLE-STYLE "hello" MINIMAL INTRO SCREEN
+   Pure, single-line, elegant cursive script.
+   ========================================================================== */
 #apple-intro-overlay {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background-color: #fbfbfd;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.7s;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+  cursor: pointer;
 }
 
 #apple-intro-overlay.dismissed {
   opacity: 0;
-  transform: translateY(-24px) scale(0.99);
+  transform: scale(1.01);
   pointer-events: none;
   visibility: hidden;
 }
 
-/* Apple Cursive Stroke Animation */
+/* Fluid Cursive Handwriting Stroke */
 .apple-hello-svg path {
   stroke-dasharray: 1400;
   stroke-dashoffset: 1400;
-  animation: drawHello 2.4s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+  animation: drawHello 1.8s cubic-bezier(0.25, 1, 0.35, 1) forwards;
 }
 
 @keyframes drawHello {
@@ -106,7 +89,7 @@ h1, h2, h3, h4, .font-display {
 }
 
 .hello-dot-period {
-  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.1s forwards;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.6s forwards;
   opacity: 0;
   transform-origin: center;
 }
@@ -122,58 +105,19 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
-/* Mechanical Corner Bracket Accents */
-.cad-bracket {
-  position: relative;
-}
-.cad-bracket::before,
-.cad-bracket::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-color: var(--color-primary);
-  pointer-events: none;
-}
-.cad-bracket::before {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid;
-  border-left: 2px solid;
-}
-.cad-bracket::after {
-  bottom: -1px;
-  right: -1px;
-  border-bottom: 2px solid;
-  border-right: 2px solid;
-}
-
-/* Crosshair Reticle Element */
-.cad-crosshair {
-  position: relative;
-}
-.cad-crosshair::before {
-  content: '+';
-  font-family: var(--font-mono);
-  font-size: 11px;
-  line-height: 1;
-  color: var(--color-primary);
-  position: absolute;
-}
-
-/* Machined Spec Sheet Card */
+/* Clean Professional Resume Card */
 .spec-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 6px;
+  border-radius: 8px;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .spec-card:hover {
   border-color: var(--color-border-strong);
-  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
 }
 
-/* Interactive Sliders */
+/* Sliders for interactive tools */
 input[type="range"].cad-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -186,12 +130,12 @@ input[type="range"].cad-slider {
 input[type="range"].cad-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--color-primary);
   border: 2px solid #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: pointer;
   transition: transform 0.15s ease;
 }
@@ -199,21 +143,21 @@ input[type="range"].cad-slider::-webkit-slider-thumb:hover {
   transform: scale(1.15);
 }
 
-/* Status Pulsing Dot */
+/* Active Status Dot */
 .status-pulse {
   position: relative;
   display: inline-flex;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-primary);
+  background-color: #10b981;
 }
 .status-pulse::after {
   content: '';
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background-color: var(--color-primary);
+  background-color: #10b981;
   opacity: 0.4;
   animation: pulsePing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
@@ -221,22 +165,6 @@ input[type="range"].cad-slider::-webkit-slider-thumb:hover {
 @keyframes pulsePing {
   0% { transform: scale(0.9); opacity: 0.6; }
   75%, 100% { transform: scale(2.2); opacity: 0; }
-}
-
-/* Custom Scrollbar for Spec Panels */
-.custom-scroll::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-.custom-scroll::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-.custom-scroll::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
-}
-.custom-scroll::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }
 
 /* Print Optimization */

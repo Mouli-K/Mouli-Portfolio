@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moulish Kumar R | Mechanical Design Engineer | New Product Development</title>
-  <meta name="description" content="Mechanical Design Engineer with 4+ years of NPD experience across Emerson Fisher Control Valves and L&T Technology Services. M.Tech from BITS Pilani. ASME B16.34, GD&T, FEA & CAD.">
+  <title>Moulish Kumar R | Mechanical Design Engineer | NPD Resume &amp; Portfolio</title>
+  <meta name="description" content="Portfolio and resume of Moulish Kumar R, Mechanical Design Engineer with 4 years of NPD experience at Emerson (Fisher) and L&T Technology Services. M.Tech BITS Pilani (84%).">
   <link rel="canonical" href="https://mouli-resume-2026.pages.dev/">
 
-  <!-- Google Fonts: Plus Jakarta Sans (Display), Inter (Body), JetBrains Mono (Technical) -->
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -26,17 +26,6 @@
               DEFAULT: '#0284c7',
               dark: '#0369a1',
               light: '#e0f2fe'
-            },
-            slate: {
-              900: '#0f172a',
-              800: '#1e293b',
-              700: '#334155',
-              600: '#475569',
-              500: '#64748b',
-              400: '#94a3b8',
-              200: '#e2e8f0',
-              100: '#f1f5f9',
-              50: '#f8fafc'
             }
           },
           fontFamily: {
@@ -48,86 +37,32 @@
       }
     }
   </script>
-
-  <!-- Custom Design Tokens & Apple Intro Styles -->
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
 <body class="bg-canvas text-slate-900 font-body antialiased flex flex-col min-h-screen">
 
   <!-- ==========================================================================
-       APPLE-STYLE "hello." CINEMATIC INTRO OVERLAY
+       APPLE-STYLE "hello" MINIMAL INTRO SCREEN
+       Just like the iconic Apple product intro: clean screen, cursive "hello"
        ========================================================================== -->
   <div id="apple-intro-overlay" class="no-print">
-    <!-- Top HUD Coordinates and Skip Button -->
-    <div class="absolute top-6 left-6 right-6 flex items-center justify-between text-xs font-mono text-slate-500">
-      <div class="flex items-center gap-3">
-        <span class="w-2 h-2 rounded-full bg-primary status-pulse"></span>
-        <span>CALIBRATING KINEMATICS // REF: ASME B16.34</span>
+    <button id="skip-intro-btn" class="absolute top-6 right-6 text-xs font-mono text-slate-400 hover:text-slate-600 transition flex items-center gap-1">
+      <span>Skip</span>
+      <span>&rarr;</span>
+    </button>
+
+    <div class="flex flex-col items-center justify-center text-center select-none pointer-events-none">
+      <svg class="w-64 sm:w-80 md:w-96 h-auto overflow-visible apple-hello-svg" viewBox="0 0 380 130" fill="none">
+        <path d="M 45 105 C 45 42 46 22 56 22 C 65 22 66 85 82 85 C 96 85 106 65 118 65 C 130 65 130 108 140 108 C 146 108 174 108 178 82 C 182 56 160 58 152 75 C 146 88 152 108 175 108 C 188 108 198 94 205 78 L 210 20 L 218 20 L 214 108 C 220 108 238 108 245 80 L 250 20 L 258 20 L 253 108 C 265 108 285 109 292 88 C 298 70 292 58 278 58 C 262 58 256 78 260 94 C 265 110 286 110 305 98 C 314 92 322 84 326 78" 
+              stroke="#0f172a" 
+              stroke-width="5.5" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" />
+        <circle cx="342" cy="106" r="5" fill="#0284c7" class="hello-dot-period" />
+      </svg>
+      <div class="text-xs font-mono text-slate-400 mt-4 tracking-widest uppercase">
+        welcome
       </div>
-      <button id="skip-intro-btn" class="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5 text-xs font-mono border border-slate-300 shadow-sm">
-        <span>Skip Intro</span>
-        <kbd class="px-1.5 py-0.5 text-[10px] bg-white rounded border border-slate-300">ESC</kbd>
-      </button>
-    </div>
-
-    <!-- Center Stage: The Apple "hello." Drawing Script -->
-    <div class="flex flex-col items-center justify-center max-w-2xl px-6 text-center">
-      <!-- Precision SVG Cursive Path -->
-      <div class="relative mb-4">
-        <!-- Drafting Guidelines -->
-        <svg class="w-72 sm:w-96 md:w-[460px] h-auto overflow-visible select-none apple-hello-svg" viewBox="0 0 460 140" fill="none">
-          <line x1="10" y1="108" x2="450" y2="108" stroke="#cbd5e1" stroke-width="0.75" stroke-dasharray="3 3"></line>
-          <line x1="10" y1="24" x2="450" y2="24" stroke="#cbd5e1" stroke-width="0.5" stroke-dasharray="2 4"></line>
-          <text x="415" y="104" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">BL:0.0</text>
-          
-          <!-- Drawing Cursive Stroke -->
-          <path d="M 45 105 C 45 42 46 22 56 22 C 65 22 66 85 82 85 C 96 85 106 65 118 65 C 130 65 130 108 140 108 C 146 108 174 108 178 82 C 182 56 160 58 152 75 C 146 88 152 108 175 108 C 188 108 198 94 205 78 L 210 20 L 218 20 L 214 108 C 220 108 238 108 245 80 L 250 20 L 258 20 L 253 108 C 265 108 285 109 292 88 C 298 70 292 58 278 58 C 262 58 256 78 260 94 C 265 110 286 110 305 98 C 314 92 322 84 326 78" 
-                stroke="#0f172a" 
-                stroke-width="5" 
-                stroke-linecap="round" 
-                stroke-linejoin="round" />
-          <!-- Animated dot period -->
-          <circle cx="342" cy="106" r="5" fill="#0284c7" class="hello-dot-period" />
-        </svg>
-      </div>
-
-      <!-- Identity Lockup -->
-      <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
-        MOULISH KUMAR R
-      </h2>
-      <p class="font-mono text-xs sm:text-sm text-primary font-medium mt-1 tracking-wider uppercase">
-        Mechanical Design Engineer &bull; New Product Development &bull; Simulation & Materials
-      </p>
-
-      <!-- Engineer Reticle Preview with Photo -->
-      <div class="mt-6 flex items-center gap-4 p-2.5 bg-white border border-slate-200 rounded-lg shadow-sm">
-        <div class="relative w-12 h-12 rounded overflow-hidden border border-slate-300">
-          <img src="assets/images/moulish-presentation.jpg" alt="Moulish Kumar R Presentation" class="w-full h-full object-cover">
-          <span class="absolute inset-0 border border-primary/40 pointer-events-none"></span>
-        </div>
-        <div class="text-left font-mono text-[11px] leading-tight text-slate-600">
-          <div class="text-slate-900 font-semibold flex items-center gap-1.5">
-            <span>EMERSON &bull; FISHER CONTROL VALVES</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          </div>
-          <div class="text-slate-500 mt-0.5">M.Tech (BITS Pilani) &bull; CSWP &bull; ASME GD&T</div>
-        </div>
-      </div>
-
-      <!-- Micro Telemetry Progress Bar -->
-      <div class="w-64 mt-6">
-        <div class="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
-          <div id="intro-progress-bar" class="h-full bg-primary transition-all duration-100 ease-out" style="width: 0%"></div>
-        </div>
-        <div id="intro-progress-text" class="text-[10px] font-mono text-slate-400 mt-2 tracking-wider">
-          SYSTEM KINEMATICS INITIALIZING [0%]
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Mechanical Spec Note -->
-    <div class="absolute bottom-6 text-center font-mono text-[11px] text-slate-400">
-      ISO 2768-mK // CAD: SIEMENS NX &bull; CREO &bull; SOLIDWORKS // CHENNAI, INDIA
     </div>
   </div>
 
@@ -148,7 +83,7 @@
               MOULISH KUMAR R
             </div>
             <div class="font-mono text-[10px] tracking-wider text-slate-500 uppercase">
-              Mechanical Design &bull; NPD
+              Mechanical Design &bull; NPD Engineer
             </div>
           </div>
         </a>
@@ -156,7 +91,7 @@
         <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
           <a href="index.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-primary font-semibold border-b-2 border-primary transition">Overview</a>
-          <a href="works.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Works</a>
+          <a href="works.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Experience</a>
           <a href="projects.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Projects</a>
           <a href="skills.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Skills</a>
           <a href="education.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Education</a>
@@ -166,48 +101,41 @@
         <!-- Right Action Buttons -->
         <div class="hidden sm:flex items-center gap-3">
           <!-- Replay Intro Trigger -->
-          <button class="replay-intro-trigger p-2 text-slate-500 hover:text-primary hover:bg-slate-100 rounded transition" title="Replay Apple 'hello.' Intro">
+          <button class="replay-intro-trigger p-2 text-slate-400 hover:text-primary hover:bg-slate-100 rounded transition" title="Replay 'hello' intro">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
             </svg>
           </button>
 
           <!-- Download Resume Button -->
-          <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono font-medium rounded bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition shadow-sm">
-            <svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <span>Resume DOCX</span>
+          <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono font-medium rounded bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition shadow-sm">
+            <svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span>Resume (DOCX)</span>
           </a>
 
-          <!-- Get in Touch CTA -->
+          <!-- Contact Button -->
           <a href="contact.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded bg-primary hover:bg-primary-dark text-white transition shadow-sm">
-            <span>Inquire</span>
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
+            <span>Get in Touch</span>
           </a>
         </div>
 
-        <!-- Mobile Menu Hamburger Button -->
+        <!-- Mobile Menu Toggle -->
         <div class="flex md:hidden items-center gap-2">
           <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:text-slate-900 rounded focus:outline-none" aria-label="Toggle Navigation">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div id="mobile-nav-drawer" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1">
       <a href="index.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-primary font-bold bg-slate-50">Overview</a>
-      <a href="works.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Works & Experience</a>
-      <a href="projects.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Engineering Projects</a>
-      <a href="skills.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Skills & Tooling</a>
-      <a href="education.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Education & Honors</a>
-      <a href="contact.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Contact & Consultation</a>
+      <a href="works.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Experience</a>
+      <a href="projects.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Projects &amp; Dissertations</a>
+      <a href="skills.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Skills &amp; Tooling</a>
+      <a href="education.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Education &amp; Credentials</a>
+      <a href="contact.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Contact &amp; Inquiries</a>
       <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
         <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="text-xs font-mono text-primary flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
@@ -221,60 +149,68 @@
   </header>
 
   <!-- ==========================================================================
-       HERO SECTION: PRECISION MECHANICAL PRESENTATION
+       HERO SECTION: CANDIDATE INTRODUCTION FOR HIRING MANAGERS
        ========================================================================== -->
   <main class="flex-grow">
-    <section class="relative bg-blueprint-grid py-12 md:py-20 border-b border-slate-200">
+    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          <!-- Left Column: Executive Identity & Thesis -->
-          <div class="lg:col-span-7 space-y-6">
+          <!-- Left Column: Professional Profile & Bio -->
+          <div class="lg:col-span-7 space-y-5">
             
-            <!-- Telemetry Status Pill -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-300 shadow-sm">
+            <!-- Candidate Status Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm">
               <span class="w-2 h-2 rounded-full bg-emerald-500 status-pulse"></span>
-              <span class="font-mono text-xs font-medium text-slate-700 uppercase tracking-wider">
-                ACTIVE NPD PROGRAM // EMERSON (FISHER CONTROL VALVES)
+              <span class="font-mono text-xs font-medium text-slate-700">
+                Open to Mechanical Design &amp; NPD Roles
               </span>
             </div>
 
-            <!-- Master Headline -->
-            <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
-              Synthesizing mechanical intent into <span class="text-primary">factory-ready physical reality.</span>
-            </h1>
+            <!-- Main Heading -->
+            <div>
+              <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Moulish Kumar R
+              </h1>
+              <p class="font-mono text-sm sm:text-base text-primary font-semibold mt-1">
+                Mechanical Design Engineer &bull; New Product Development (NPD)
+              </p>
+            </div>
 
-            <!-- Narrative Subtitle -->
-            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-              Mechanical Design Engineer with <strong>4 years of New Product Development (NPD) experience</strong> spanning high-pressure industrial control valves at <strong>Emerson (Fisher)</strong> and automotive exhaust systems at <strong>L&T Technology Services</strong>. M.Tech in Design Engineering from <strong>BITS Pilani</strong>.
+            <!-- Factual Summary Paragraph -->
+            <p class="text-base text-slate-700 leading-relaxed">
+              Mechanical Design Engineer with <strong>4 years of industrial experience</strong> in New Product Development (NPD). Currently developing severe-service high-pressure control valves at <strong>Emerson (Fisher)</strong>, following 3 years designing automotive exhaust systems at <strong>L&T Technology Services</strong>.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Holds an <strong>M.Tech in Design Engineering from BITS Pilani (84%)</strong> and B.Tech from SASTRA University (78%). Certified SolidWorks Professional (CSWP) and formally certified in ASME Y14.5 GD&T. Experienced in Siemens NX, Creo, SolidWorks, Teamcenter PLM, and factory-facing DFM/DFA trials.
             </p>
 
-            <!-- Technical Philosophy Tags -->
+            <!-- Key Badges -->
             <div class="flex flex-wrap gap-2 pt-1">
-              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">ASME B16.34 Valves</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">ASME Y14.5 GD&T</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">Siemens NX &bull; Creo &bull; SolidWorks</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">FEA &amp; Fatigue</span>
-              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">DFM / DFA / Factory Trials</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">Emerson Fisher NPD</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">L&amp;T Technology Services</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">BITS Pilani M.Tech (84%)</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">ASME B16.34 &bull; ASME Y14.5 GD&T</span>
+              <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">SolidWorks CSWP</span>
               <span class="px-2.5 py-1 text-xs font-mono bg-white border border-slate-200 rounded text-slate-700">Teamcenter PLM</span>
             </div>
 
-            <!-- Action CTAs -->
-            <div class="flex flex-wrap items-center gap-4 pt-4">
-              <a href="works.html" class="px-5 py-3 rounded text-sm font-medium bg-primary hover:bg-primary-dark text-white transition shadow flex items-center gap-2">
-                <span>Inspect Industrial Works</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <!-- Candidate CTAs -->
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="px-5 py-2.5 rounded text-xs font-mono font-semibold bg-primary hover:bg-primary-dark text-white transition shadow flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <span>Download Resume (DOCX)</span>
               </a>
-              <a href="projects.html" class="px-5 py-3 rounded text-sm font-mono text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 transition shadow-sm flex items-center gap-2">
-                <span>[P-01] Leaf Spring &amp; Materials</span>
+              <a href="works.html" class="px-5 py-2.5 rounded text-xs font-mono text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 transition shadow-sm flex items-center gap-2">
+                <span>View Work Experience &rarr;</span>
               </a>
-              <button class="replay-intro-trigger text-xs font-mono text-slate-500 hover:text-primary transition underline decoration-dotted flex items-center gap-1">
-                <span>▶ Replay "hello." Intro</span>
-              </button>
+              <a href="contact.html" class="px-4 py-2.5 rounded text-xs font-mono text-slate-600 hover:text-slate-900 transition underline decoration-dotted">
+                Contact Details
+              </a>
             </div>
 
-            <!-- Location & Contact Micro Strip -->
-            <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs font-mono text-slate-500">
+            <!-- Coordinates Strip -->
+            <div class="pt-3 border-t border-slate-200 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs font-mono text-slate-500">
               <span class="flex items-center gap-1.5">
                 <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
                 Chennai, Tamil Nadu, India
@@ -282,6 +218,10 @@
               <a href="mailto:moulimano0305@gmail.com" class="hover:text-primary transition flex items-center gap-1.5">
                 <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 moulimano0305@gmail.com
+              </a>
+              <a href="tel:+919597542596" class="hover:text-primary transition flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                +91 95975 42596
               </a>
               <a href="https://linkedin.com/in/moulish1" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition flex items-center gap-1.5">
                 <svg class="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -291,65 +231,32 @@
 
           </div>
 
-          <!-- Right Column: Precision Engineer Profile & CAD Inspection Card -->
+          <!-- Right Column: Candidate Photo & Quick Profile Card -->
           <div class="lg:col-span-5">
-            <div class="spec-card p-4 sm:p-5 cad-bracket bg-white shadow-xl relative">
+            <div class="spec-card p-4 sm:p-5 bg-white shadow-sm">
               
-              <!-- Card Top Header Bar -->
-              <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200 text-xs font-mono text-slate-500">
-                <span class="text-primary font-semibold tracking-wider">[INSPECTION: REF-MK-2026]</span>
-                <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold text-[10px]">
-                  VERIFIED CREDENTIALS
-                </span>
+              <!-- Clean Profile Photo -->
+              <div class="rounded-md overflow-hidden border border-slate-200 bg-slate-100 aspect-[4/5] max-h-[440px]">
+                <img src="assets/images/moulish-presentation.jpg" alt="Moulish Kumar R presenting engineering research" class="w-full h-full object-cover object-top">
               </div>
 
-              <!-- Engineer Photo (Selected Image 2: Engineering Presentation on Materials & Steel) -->
-              <div class="relative rounded overflow-hidden border border-slate-300 bg-slate-100 group aspect-[4/5] max-h-[460px]">
-                <img src="assets/images/moulish-presentation.jpg" alt="Moulish Kumar R presenting engineering research on materials" class="w-full h-full object-cover object-top filter contrast-[1.02]">
-                
-                <!-- CAD Crosshairs & Dimension Overlay -->
-                <div class="absolute inset-0 pointer-events-none p-4 flex flex-col justify-between">
-                  <div class="flex justify-between items-start">
-                    <span class="font-mono text-[10px] text-white/90 bg-slate-900/75 backdrop-blur-sm px-2 py-0.5 rounded border border-white/20">
-                      &plusmn;0.005mm TOLERANCE
-                    </span>
-                    <span class="font-mono text-[10px] text-white/90 bg-slate-900/75 backdrop-blur-sm px-2 py-0.5 rounded border border-white/20">
-                      ISO 2768-mK
-                    </span>
-                  </div>
-                  
-                  <!-- Bottom Caption Banner -->
-                  <div class="bg-slate-900/85 backdrop-blur-sm p-3 rounded border border-white/20 text-white">
-                    <div class="font-mono text-[10px] text-sky-400 uppercase tracking-widest font-semibold">
-                      TECHNICAL SEMINAR &bull; MATERIALS &amp; STRUCTURAL DESIGN
-                    </div>
-                    <div class="font-display text-sm font-semibold mt-0.5">
-                      Moulish Kumar R &bull; M.Tech Design Engineering
-                    </div>
-                    <div class="font-mono text-[11px] text-slate-300 mt-0.5">
-                      BITS Pilani &bull; SASTRA &bull; Emerson Fisher NPD
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Quick Spec Well -->
+              <!-- Compact Candidate Metadata -->
               <div class="mt-4 p-3 bg-slate-50 rounded border border-slate-200 text-xs font-mono space-y-1.5">
                 <div class="flex justify-between items-center text-slate-700">
-                  <span class="text-slate-500">Core CAD Stack:</span>
-                  <span class="font-semibold text-slate-900">Siemens NX &bull; Creo &bull; SolidWorks</span>
+                  <span class="text-slate-500">Current Role:</span>
+                  <span class="font-semibold text-slate-900">Design Engineer - NPD (Emerson)</span>
                 </div>
                 <div class="flex justify-between items-center text-slate-700">
-                  <span class="text-slate-500">PLM Infrastructure:</span>
-                  <span class="font-semibold text-slate-900">Siemens Teamcenter</span>
+                  <span class="text-slate-500">Total Experience:</span>
+                  <span class="font-semibold text-slate-900">4 Years (Emerson + LTTS)</span>
                 </div>
                 <div class="flex justify-between items-center text-slate-700">
-                  <span class="text-slate-500">Standards Compliance:</span>
-                  <span class="font-semibold text-primary">ASME B16.34 &bull; ASME Y14.5 GD&T</span>
+                  <span class="text-slate-500">Highest Degree:</span>
+                  <span class="font-semibold text-slate-900">M.Tech (BITS Pilani, 84%)</span>
                 </div>
                 <div class="flex justify-between items-center text-slate-700">
-                  <span class="text-slate-500">Digital Solutions:</span>
-                  <span class="font-semibold text-slate-900">Microsoft Power Apps NPD Tracker</span>
+                  <span class="text-slate-500">Certifications:</span>
+                  <span class="font-semibold text-primary">SolidWorks CSWP &bull; ASME GD&T</span>
                 </div>
               </div>
 
@@ -361,34 +268,34 @@
     </section>
 
     <!-- ==========================================================================
-       KEY METRICS TELEMETRY COUNTER STRIP
+       KEY CAREER METRICS
        ========================================================================== -->
     <section class="bg-white border-b border-slate-200 py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           
           <div class="p-4 rounded border border-slate-200 bg-slate-50/50">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">4+</div>
-            <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">Years Industrial NPD</div>
+            <div class="font-mono text-3xl font-bold text-slate-900">4 Years</div>
+            <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">Industrial NPD Experience</div>
             <div class="text-[11px] text-slate-400 mt-0.5">Emerson &amp; L&amp;T Technology Services</div>
           </div>
 
           <div class="p-4 rounded border border-slate-200 bg-slate-50/50">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">75</div>
-            <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">Configurations Evaluated</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">M.Tech Leaf Spring FEA &amp; Pugh Study</div>
-          </div>
-
-          <div class="p-4 rounded border border-slate-200 bg-slate-50/50">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-emerald-600 tracking-tight">+25.4%</div>
-            <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">UTS Tensile Gain</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">Laser Shock Peening on ZE41 Alloy</div>
-          </div>
-
-          <div class="p-4 rounded border border-slate-200 bg-slate-50/50">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">84%</div>
+            <div class="font-mono text-3xl font-bold text-primary">84%</div>
             <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">M.Tech Distinction</div>
             <div class="text-[11px] text-slate-400 mt-0.5">BITS Pilani (Design Engineering)</div>
+          </div>
+
+          <div class="p-4 rounded border border-slate-200 bg-slate-50/50">
+            <div class="font-mono text-3xl font-bold text-emerald-600">75</div>
+            <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">Configurations Modeled</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">FEA &amp; Pugh Selection Study</div>
+          </div>
+
+          <div class="p-4 rounded border border-slate-200 bg-slate-50/50">
+            <div class="font-mono text-3xl font-bold text-slate-900">2x Certs</div>
+            <div class="font-mono text-xs uppercase tracking-wider text-slate-500 mt-1">Industry Credentials</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">CSWP &bull; ASME Y14.5 GD&amp;T</div>
           </div>
 
         </div>
@@ -396,122 +303,156 @@
     </section>
 
     <!-- ==========================================================================
-       FEATURED WORKS HIGHLIGHTS (PAGES OVERVIEW)
+       WORK EXPERIENCE OVERVIEW
        ========================================================================== -->
-    <section class="py-16 bg-canvas border-b border-slate-200">
+    <section class="py-14 bg-canvas border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-slate-200">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-3 border-b border-slate-200">
           <div>
-            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-primary">CORE ENGINEERING DOMAINS</span>
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-              Industrial Programs &amp; Advanced Research
+            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-primary">EMPLOYMENT HISTORY</span>
+            <h2 class="font-display text-2xl font-bold text-slate-900 mt-0.5">
+              Professional Work Experience
             </h2>
           </div>
-          <a href="works.html" class="mt-4 md:mt-0 font-mono text-xs font-semibold text-primary hover:text-primary-dark transition flex items-center gap-1">
-            <span>View All Works &amp; Case Studies</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          <a href="works.html" class="mt-3 md:mt-0 font-mono text-xs font-semibold text-primary hover:text-primary-dark transition flex items-center gap-1">
+            <span>View Full Experience &amp; Technical Breakdown &rarr;</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Role 1: Emerson -->
+          <div class="spec-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
+                <span class="text-primary font-bold">EMERSON &bull; FISHER CONTROL VALVES</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-semibold text-[10px]">CURRENT</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-slate-900 mb-1">
+                Design Engineer &ndash; New Product Development (NPD)
+              </h3>
+              <div class="text-xs font-mono text-slate-500 mb-3">Chennai, India &bull; Nov 2025 &ndash; Present</div>
+              <ul class="text-xs text-slate-600 space-y-2 leading-relaxed mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Develop mechanical components for high-pressure control valves per <strong>ASME B16.34</strong> and <strong>ASME Y14.5 GD&T</strong>.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Formulate calculation-led designs, sizing, tolerance stack-ups, and FEA stress/deflection simulations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Support shop floor factory trials, resolving assembly interference, and maintaining BOMs in Siemens Teamcenter.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Built a custom <strong>Microsoft Power Apps</strong> NPD Tracker for tracking deliverables and open items.</span>
+                </li>
+              </ul>
+            </div>
+            <a href="works.html#emerson" class="inline-flex items-center gap-1 text-xs font-mono font-semibold text-primary hover:underline pt-3 border-t border-slate-100">
+              <span>Read Emerson Responsibilities &rarr;</span>
+            </a>
+          </div>
+
+          <!-- Role 2: LTTS -->
+          <div class="spec-card p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
+                <span class="text-primary font-bold">L&amp;T TECHNOLOGY SERVICES</span>
+                <span class="text-slate-500">SEP 2022 &ndash; OCT 2025</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-slate-900 mb-1">
+                Engineer &ndash; Automotive Exhaust Design &amp; Development
+              </h3>
+              <div class="text-xs font-mono text-slate-500 mb-3">Promoted from Associate Engineer in Sep 2023</div>
+              <ul class="text-xs text-slate-600 space-y-2 leading-relaxed mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Designed parametric 3D CAD models of automotive sheet metal components, gussets, and exhaust mounting brackets.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Performed structural, thermal, and vibration FEA reliability studies under severe road excitation spectra.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Validated nominal CAD against 3D STL scan data, identifying deviations and executing corrective design revisions.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-primary mt-1">&bull;</span>
+                  <span>Received <strong>Employees' Choice Award for Innovative Solution</strong> at LTTS OpenHack.</span>
+                </li>
+              </ul>
+            </div>
+            <a href="works.html#ltts" class="inline-flex items-center gap-1 text-xs font-mono font-semibold text-primary hover:underline pt-3 border-t border-slate-100">
+              <span>Read LTTS Details &rarr;</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       FEATURED RESEARCH & PROJECTS
+       ========================================================================== -->
+    <section class="py-14 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-3 border-b border-slate-200">
+          <div>
+            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-primary">ACADEMIC &amp; MATERIALS RESEARCH</span>
+            <h2 class="font-display text-2xl font-bold text-slate-900 mt-0.5">
+              Featured Engineering Projects &amp; Dissertations
+            </h2>
+          </div>
+          <a href="projects.html" class="mt-3 md:mt-0 font-mono text-xs font-semibold text-primary hover:text-primary-dark transition flex items-center gap-1">
+            <span>Explore All Projects &amp; Theses &rarr;</span>
           </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <!-- Highlight 1: Emerson Fisher NPD -->
-          <div class="spec-card p-6 flex flex-col justify-between">
+          <div class="spec-card p-5 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
-                <span class="text-primary font-bold">EMERSON // FISHER</span>
-                <span>NOV 2025 - PRESENT</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-slate-900 mb-2">
-                High-Pressure Control Valve NPD
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                Developing mechanical components for high-pressure control valves. Translating functional requirements into parametric 3D models, ASME B16.34 compliance, ASME Y14.5 GD&T drawings, and factory trial iterations.
+              <div class="text-[11px] font-mono text-primary font-bold mb-1">BITS PILANI DISSERTATION &bull; 84%</div>
+              <h3 class="font-display font-bold text-slate-900 text-sm mb-2">Automotive Leaf Spring Optimization</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Evaluated 75 configurations combining spring steel and composites. Recommended an S-glass/epoxy-steel hybrid showing <strong>28% simulated weight reduction</strong> and <strong>66% higher stiffness</strong>.
               </p>
-              <div class="space-y-1.5 text-xs font-mono text-slate-600 mb-6">
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>Calculation-led mechanical design</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>FEA simulation &amp; material selection</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>Power Apps NPD project tracker</span>
-                </div>
-              </div>
             </div>
-            <a href="works.html#emerson" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-primary hover:text-primary-dark pt-3 border-t border-slate-100">
-              <span>Read Emerson Program Details &rarr;</span>
+            <a href="assets/docs/Leaf_Springs_MultiDomain_Optimization_Dissertation.pdf" target="_blank" class="text-xs font-mono text-primary hover:underline pt-2 border-t border-slate-100 flex items-center gap-1">
+              <span>Download 58-Page Thesis (PDF) &rarr;</span>
             </a>
           </div>
 
-          <!-- Highlight 2: LTTS Automotive Exhaust -->
-          <div class="spec-card p-6 flex flex-col justify-between">
+          <div class="spec-card p-5 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
-                <span class="text-primary font-bold">L&amp;T TECHNOLOGY SERVICES</span>
-                <span>SEP 2022 - OCT 2025</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-slate-900 mb-2">
-                Automotive Exhaust Design &amp; FEA
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                Designed sheet metal components and mounting brackets for automotive exhaust systems. Conducted structural, thermal, and vibration FEA, STL scan validation, and Teamcenter PLM BOM management.
+              <div class="text-[11px] font-mono text-primary font-bold mb-1">SASTRA MATERIALS PROJECT &bull; MEC 300</div>
+              <h3 class="font-display font-bold text-slate-900 text-sm mb-2">Laser Shock Peening on ZE41 Mg Alloy</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Investigated pulsed Nd:YAG laser shock peening on aerospace magnesium alloy. Demonstrated an ultimate tensile strength increase from <strong>134 to 168 MPa (+25.4%)</strong>.
               </p>
-              <div class="space-y-1.5 text-xs font-mono text-slate-600 mb-6">
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>Promoted to Engineer within 1 year</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>LTTS OpenHack Employees' Choice Award</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>CAD nominal vs. STL scan deviation</span>
-                </div>
-              </div>
             </div>
-            <a href="works.html#ltts" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-primary hover:text-primary-dark pt-3 border-t border-slate-100">
-              <span>Read LTTS Program Details &rarr;</span>
+            <a href="assets/docs/Laser_Shock_Peening_ZE41_Mg_Report.pdf" target="_blank" class="text-xs font-mono text-primary hover:underline pt-2 border-t border-slate-100 flex items-center gap-1">
+              <span>Download 39-Page Report (PDF) &rarr;</span>
             </a>
           </div>
 
-          <!-- Highlight 3: M.Tech Leaf Spring Optimization -->
-          <div class="spec-card p-6 flex flex-col justify-between">
+          <div class="spec-card p-5 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
-                <span class="text-primary font-bold">BITS PILANI DISSERTATION</span>
-                <span>GRADUATED 2026 (84%)</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-slate-900 mb-2">
-                Leaf Spring Multi-Domain Optimization
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                Assessed 75 steel, composite, and hybrid configurations using finite element analysis and weighted Pugh selection. Engineered an S-glass/epoxy-steel sandwich achieving 28% weight savings and 66% higher stiffness.
+              <div class="text-[11px] font-mono text-primary font-bold mb-1">SASTRA MAJOR PROJECT &bull; MEC 400</div>
+              <h3 class="font-display font-bold text-slate-900 text-sm mb-2">PLA Coir Fibre Composite via Stir Casting</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Fabricated eco-friendly bio-composites using surface-treated coir fibers and PLA matrix. Characterized mechanical tensile, flexural, and impact properties per ASTM standards.
               </p>
-              <div class="space-y-1.5 text-xs font-mono text-slate-600 mb-6">
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>Multi-material hybrid topology</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>Stress, deflection, and fatigue life</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="text-primary">&bull;</span>
-                  <span>Full 58-page thesis available</span>
-                </div>
-              </div>
             </div>
-            <a href="projects.html#leaf-spring" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-primary hover:text-primary-dark pt-3 border-t border-slate-100">
-              <span>Explore Leaf Spring Study &rarr;</span>
+            <a href="assets/docs/PLA_Coir_Composite_Stir_Casting_Report.pdf" target="_blank" class="text-xs font-mono text-primary hover:underline pt-2 border-t border-slate-100 flex items-center gap-1">
+              <span>Download 45-Page Report (PDF) &rarr;</span>
             </a>
           </div>
 
@@ -521,134 +462,100 @@
     </section>
 
     <!-- ==========================================================================
-       TECHNICAL EXPERTISE & METHODOLOGY MATRIX
+       TECHNICAL SKILLS SNAPSHOT
        ========================================================================== -->
-    <section class="py-16 bg-white border-b border-slate-200">
+    <section class="py-14 bg-canvas border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
-          <div class="lg:col-span-5 space-y-4">
-            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-primary">ENGINEERING RIGOR</span>
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
-              Mechanics-First Methodology from Concept to Shop Floor
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-3 border-b border-slate-200">
+          <div>
+            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-primary">CORE COMPETENCIES</span>
+            <h2 class="font-display text-2xl font-bold text-slate-900 mt-0.5">
+              Technical Tooling &amp; Engineering Skills
             </h2>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Every mechanical component begins with fundamental free-body diagrams and analytical stress formulations before CAD modeling. This calculation-led philosophy eliminates costly design iterations during factory trials and ensures zero compliance bottlenecks with ASME standards.
-            </p>
-            <div class="pt-2">
-              <a href="skills.html" class="inline-flex items-center gap-2 px-4 py-2 rounded text-xs font-mono font-medium bg-slate-900 text-white hover:bg-primary transition shadow-sm">
-                <span>Interactive Tolerance &amp; Bolt Calculators</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </div>
           </div>
-
-          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
-            <div class="p-4 bg-slate-50 rounded border border-slate-200">
-              <div class="font-mono text-xs font-bold text-primary mb-1">01 // CALCULATION-LED CAD</div>
-              <div class="font-display font-semibold text-slate-900 text-sm mb-1">Parametric 3D &amp; GD&T</div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Siemens NX, Creo, SolidWorks CSWP. Dimensional stack-ups, fits &amp; tolerances per ASME Y14.5.
-              </p>
-            </div>
-
-            <div class="p-4 bg-slate-50 rounded border border-slate-200">
-              <div class="font-mono text-xs font-bold text-primary mb-1">02 // MULTIPHYSICS FEA</div>
-              <div class="font-display font-semibold text-slate-900 text-sm mb-1">Structural &amp; Thermal FEA</div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Vibration harmonic response, high-pressure boundary conditions, stress concentration relief, and fatigue life.
-              </p>
-            </div>
-
-            <div class="p-4 bg-slate-50 rounded border border-slate-200">
-              <div class="font-mono text-xs font-bold text-primary mb-1">03 // DFM / DFA &amp; TRIALS</div>
-              <div class="font-display font-semibold text-slate-900 text-sm mb-1">Factory-Facing Execution</div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Cross-functional trial feedback, assembly tooling clearance, casting &amp; sheet-metal manufacturability.
-              </p>
-            </div>
-
-            <div class="p-4 bg-slate-50 rounded border border-slate-200">
-              <div class="font-mono text-xs font-bold text-primary mb-1">04 // DIGITAL WORKFLOW</div>
-              <div class="font-display font-semibold text-slate-900 text-sm mb-1">PLM &amp; Power Apps Tracker</div>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Siemens Teamcenter BOM management, revision tracking, and custom Microsoft Power Apps NPD solutions.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       ABOUT MOULISH & INDUSTRIAL JOURNEY
-       ========================================================================== -->
-    <section class="py-16 bg-canvas border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="spec-card p-6 sm:p-10 bg-white">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div class="lg:col-span-4 flex flex-col items-center text-center">
-              <div class="relative w-44 h-44 rounded-full overflow-hidden border-4 border-slate-100 shadow-md">
-                <img src="assets/images/moulish-profile.jpg" alt="Moulish Kumar R at Emerson" class="w-full h-full object-cover">
-              </div>
-              <h3 class="font-display font-bold text-slate-900 text-lg mt-4">Moulish Kumar R</h3>
-              <p class="font-mono text-xs text-primary font-medium">Design Engineer &bull; Emerson Fisher</p>
-              <div class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-mono">
-                <span>Chennai, India</span>
-              </div>
-            </div>
-
-            <div class="lg:col-span-8 space-y-4">
-              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-primary">PROFESSIONAL PROFILE</span>
-              <h2 class="font-display text-2xl font-bold text-slate-900">
-                Bridging Theoretical Solid Mechanics with High-Reliability Production
-              </h2>
-              <p class="text-sm text-slate-600 leading-relaxed">
-                With a rigorous foundational background in mechanical design and materials engineering from <strong>SASTRA Deemed University (B.Tech, 78%)</strong> and an advanced <strong>M.Tech from BITS Pilani (84%)</strong>, I focus on solving complex structural, dimensional, and material challenges in mission-critical hardware.
-              </p>
-              <p class="text-sm text-slate-600 leading-relaxed">
-                My career encompasses end-to-end NPD cycles: formulating mechanical calculations, modeling intricate assemblies in Siemens NX and SolidWorks, verifying performance with FEA, working side-by-side with machinists and quality inspectors during trial builds, and establishing BOM data in Siemens Teamcenter.
-              </p>
-              <div class="pt-2 flex flex-wrap gap-4">
-                <a href="education.html" class="text-xs font-mono font-semibold text-primary hover:underline flex items-center gap-1">
-                  <span>Explore Academic Dissertations &amp; Certifications &rarr;</span>
-                </a>
-                <a href="contact.html" class="text-xs font-mono font-semibold text-slate-700 hover:text-slate-900 flex items-center gap-1">
-                  <span>Direct Consultation &amp; Inquiry &rarr;</span>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-       CALL TO ACTION STRIP
-       ========================================================================== -->
-    <section class="py-14 bg-slate-900 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <span class="font-mono text-xs font-semibold uppercase tracking-widest text-sky-400">
-          ENGINEERING TALENT READY FOR NEXT-GENERATION NPD
-        </span>
-        <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight max-w-2xl mx-auto">
-          Interested in discussing high-pressure valve engineering, automotive design, or advanced FEA?
-        </h2>
-        <div class="flex flex-wrap justify-center gap-4 pt-2">
-          <a href="contact.html" class="px-6 py-3 rounded text-sm font-medium bg-primary hover:bg-primary-dark text-white transition shadow">
-            Initiate Engineering Consultation
+          <a href="skills.html" class="mt-3 md:mt-0 font-mono text-xs font-semibold text-primary hover:text-primary-dark transition flex items-center gap-1">
+            <span>View All Skills &amp; Interactive Calculators &rarr;</span>
           </a>
-          <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="px-6 py-3 rounded text-sm font-mono text-white bg-slate-800 hover:bg-slate-700 border border-slate-600 transition shadow">
-            Download Resume (DOCX)
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono">
+          
+          <div class="spec-card p-4 bg-white">
+            <div class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span>CAD Software</span>
+            </div>
+            <div class="text-slate-600 space-y-1">
+              <div>&bull; Siemens NX (Unigraphics)</div>
+              <div>&bull; SolidWorks (CSWP Certified)</div>
+              <div>&bull; PTC Creo Parametric</div>
+              <div>&bull; Parametric 3D &amp; Assemblies</div>
+            </div>
+          </div>
+
+          <div class="spec-card p-4 bg-white">
+            <div class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Simulation &amp; FEA</span>
+            </div>
+            <div class="text-slate-600 space-y-1">
+              <div>&bull; Static Structural FEA</div>
+              <div>&bull; Thermal Stress &amp; Gradients</div>
+              <div>&bull; Vibration &amp; Modal Response</div>
+              <div>&bull; Fatigue Life &amp; S-N Curves</div>
+            </div>
+          </div>
+
+          <div class="spec-card p-4 bg-white">
+            <div class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              <span>Standards &amp; GD&T</span>
+            </div>
+            <div class="text-slate-600 space-y-1">
+              <div>&bull; ASME B16.34 (Valves)</div>
+              <div>&bull; ASME Y14.5 GD&T Certified</div>
+              <div>&bull; Tolerance Stack-Up Analysis</div>
+              <div>&bull; ISO 2768 &amp; ISO 286 Fits</div>
+            </div>
+          </div>
+
+          <div class="spec-card p-4 bg-white">
+            <div class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+              <span>PLM &amp; Manufacturing</span>
+            </div>
+            <div class="text-slate-600 space-y-1">
+              <div>&bull; Siemens Teamcenter PLM</div>
+              <div>&bull; DFM / DFA &amp; Factory Trials</div>
+              <div>&bull; Microsoft Power Apps</div>
+              <div>&bull; STL 3D Scan Validation</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CALL TO ACTION FOR RECRUITERS
+       ========================================================================== -->
+    <section class="py-12 bg-white text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+          Interested in reviewing full credentials or scheduling an interview?
+        </h3>
+        <p class="text-sm text-slate-600 mt-2">
+          Feel free to download the resume, review the dissertations, or reach out directly.
+        </p>
+        <div class="mt-5 flex flex-wrap justify-center gap-3">
+          <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="px-5 py-2.5 rounded text-xs font-mono font-semibold bg-primary hover:bg-primary-dark text-white transition shadow flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span>Download Resume (DOCX)</span>
+          </a>
+          <a href="contact.html" class="px-5 py-2.5 rounded text-xs font-mono text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 transition shadow-sm">
+            Contact &bull; moulimano0305@gmail.com
           </a>
         </div>
       </div>
@@ -658,29 +565,28 @@
   <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
-  <footer class="bg-white border-t border-slate-200 py-10 text-xs text-slate-500 font-mono">
+  <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500 font-mono">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
           <div class="font-display font-bold text-slate-900 text-sm">MOULISH KUMAR R</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">Mechanical Design Engineer &bull; New Product Development &bull; Cloudflare Pages: Mouli-Resume-2026</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Mechanical Design Engineer &bull; Mouli-Resume-2026 &bull; Hosted on Cloudflare Pages</div>
         </div>
-        <div class="flex flex-wrap items-center gap-6">
+        <div class="flex flex-wrap items-center gap-5">
           <a href="index.html" class="hover:text-primary transition">Overview</a>
-          <a href="works.html" class="hover:text-primary transition">Works</a>
+          <a href="works.html" class="hover:text-primary transition">Experience</a>
           <a href="projects.html" class="hover:text-primary transition">Projects</a>
           <a href="skills.html" class="hover:text-primary transition">Skills</a>
           <a href="education.html" class="hover:text-primary transition">Education</a>
           <a href="contact.html" class="hover:text-primary transition">Contact</a>
         </div>
         <div class="text-[11px] text-slate-400">
-          &copy; 2026 Moulish Kumar R. Built for Cloudflare &amp; Git.
+          &copy; 2026 Moulish Kumar R.
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/portfolio.js"></script>
 </body>
 </html>

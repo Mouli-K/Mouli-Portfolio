@@ -1,6 +1,6 @@
 /**
- * MOULISH KUMAR R - MECHANICAL DESIGN & NPD PORTFOLIO
- * Interactive Controller: Apple 'hello.' Intro, Navigation, Calculators, CAD Tools
+ * MOULISH KUMAR R - MECHANICAL DESIGN ENGINEER PORTFOLIO
+ * Minimal Apple-Style 'hello' Intro, Navigation, and Interactive Engineering Tools
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Apple 'hello.' Cinematic Intro Controller
+   1. Minimal Apple-Style 'hello.' Intro Screen
    ========================================================================== */
 function initAppleIntro() {
   const introOverlay = document.getElementById('apple-intro-overlay');
@@ -22,14 +22,10 @@ function initAppleIntro() {
 
   const skipBtn = document.getElementById('skip-intro-btn');
   const replayBtns = document.querySelectorAll('.replay-intro-trigger');
-  const progressBar = document.getElementById('intro-progress-bar');
-  const progressText = document.getElementById('intro-progress-text');
-
   let autoDismissTimer = null;
-  let progressInterval = null;
 
   function runIntro(forced = false) {
-    if (!forced && sessionStorage.getItem('mouli_intro_played') === 'true') {
+    if (!forced && sessionStorage.getItem('mouli_intro_shown') === 'true') {
       introOverlay.classList.add('dismissed');
       introOverlay.style.display = 'none';
       return;
@@ -39,58 +35,43 @@ function initAppleIntro() {
     introOverlay.classList.remove('dismissed');
     document.body.style.overflow = 'hidden';
 
-    // Reset SVG drawing animation
+    // Reset SVG cursive handwriting animation
     const path = introOverlay.querySelector('.apple-hello-svg path');
     if (path) {
       path.style.animation = 'none';
       path.offsetHeight; /* trigger reflow */
-      path.style.animation = 'drawHello 2.4s cubic-bezier(0.25, 1, 0.35, 1) forwards';
+      path.style.animation = 'drawHello 1.8s cubic-bezier(0.25, 1, 0.35, 1) forwards';
     }
 
-    // Progress counter
-    let pct = 0;
-    if (progressBar) progressBar.style.width = '0%';
-    if (progressInterval) clearInterval(progressInterval);
-
-    progressInterval = setInterval(() => {
-      pct += 4;
-      if (pct > 100) pct = 100;
-      if (progressBar) progressBar.style.width = `${pct}%`;
-      if (progressText) {
-        if (pct < 35) progressText.textContent = `SYSTEM KINEMATICS INITIALIZING [${pct}%]`;
-        else if (pct < 70) progressText.textContent = `LOADING ASME B16.34 & Y14.5 SPECS [${pct}%]`;
-        else if (pct < 99) progressText.textContent = `CALIBRATING NPD WORKSPACES [${pct}%]`;
-        else progressText.textContent = `READY // MOULISH KUMAR R [100%]`;
-      }
-      if (pct >= 100) {
-        clearInterval(progressInterval);
-      }
-    }, 110);
-
-    // Auto dismiss after 3.1 seconds
+    // Auto-dismiss cleanly after 2.2 seconds
     if (autoDismissTimer) clearTimeout(autoDismissTimer);
     autoDismissTimer = setTimeout(() => {
       dismissIntro();
-    }, 3100);
+    }, 2200);
   }
 
   function dismissIntro() {
     if (autoDismissTimer) clearTimeout(autoDismissTimer);
-    if (progressInterval) clearInterval(progressInterval);
     introOverlay.classList.add('dismissed');
     document.body.style.overflow = '';
-    sessionStorage.setItem('mouli_intro_played', 'true');
+    sessionStorage.setItem('mouli_intro_shown', 'true');
     setTimeout(() => {
       introOverlay.style.display = 'none';
-    }, 700);
+    }, 600);
   }
 
+  // Dismiss on click anywhere on the overlay
+  introOverlay.addEventListener('click', dismissIntro);
+
   if (skipBtn) {
-    skipBtn.addEventListener('click', dismissIntro);
+    skipBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dismissIntro();
+    });
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !introOverlay.classList.contains('dismissed')) {
+    if (!introOverlay.classList.contains('dismissed')) {
       dismissIntro();
     }
   });
@@ -156,7 +137,7 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   4. Interactive Mechanical Tolerance Stack-up Calculator
+   4. Interactive Mechanical Tolerance Stack-up Demo
    ========================================================================== */
 function initToleranceCalculator() {
   const nominalInput = document.getElementById('calc-nominal-dia');
@@ -167,8 +148,8 @@ function initToleranceCalculator() {
 
   function recalculate() {
     const D = parseFloat(nominalInput.value) || 25.0;
-    const holeDev = parseFloat(holeDevInput ? holeDevInput.value : 0.021); // e.g. H7 (+0.021 / 0)
-    const shaftDev = parseFloat(shaftDevInput ? shaftDevInput.value : -0.007); // e.g. g6 (-0.007 / -0.020)
+    const holeDev = parseFloat(holeDevInput ? holeDevInput.value : 0.021);
+    const shaftDev = parseFloat(shaftDevInput ? shaftDevInput.value : -0.007);
 
     const maxHole = D + holeDev;
     const minHole = D;
@@ -181,7 +162,6 @@ function initToleranceCalculator() {
     const resMaxClr = document.getElementById('res-max-clearance');
     const resMinClr = document.getElementById('res-min-clearance');
     const resFitType = document.getElementById('res-fit-type');
-    const resDiagram = document.getElementById('res-fit-diagram');
 
     if (resMaxClr) resMaxClr.textContent = `+${(maxClearance * 1000).toFixed(1)} µm (${maxClearance.toFixed(3)} mm)`;
     if (resMinClr) resMinClr.textContent = `${minClearance >= 0 ? '+' : ''}${(minClearance * 1000).toFixed(1)} µm (${minClearance.toFixed(3)} mm)`;
@@ -208,7 +188,7 @@ function initToleranceCalculator() {
 }
 
 /* ==========================================================================
-   5. Interactive Fastener Clamping & Safety Factor Calculator
+   5. Interactive Fastener Clamping & Safety Factor Demo
    ========================================================================== */
 function initFastenerCalculator() {
   const boltSizeSelect = document.getElementById('calc-bolt-size');
@@ -217,22 +197,20 @@ function initFastenerCalculator() {
 
   if (!boltSizeSelect || !loadInput) return;
 
-  // Tensile stress area At (mm²) for standard metric coarse ISO bolts
   const boltData = {
-    'M6': { At: 20.1, pitch: 1.0 },
-    'M8': { At: 36.6, pitch: 1.25 },
-    'M10': { At: 58.0, pitch: 1.5 },
-    'M12': { At: 84.3, pitch: 1.75 },
-    'M16': { At: 157.0, pitch: 2.0 },
-    'M20': { At: 245.0, pitch: 2.5 }
+    'M6': { At: 20.1 },
+    'M8': { At: 36.6 },
+    'M10': { At: 58.0 },
+    'M12': { At: 84.3 },
+    'M16': { At: 157.0 },
+    'M20': { At: 245.0 }
   };
 
-  // Proof strength Sp (MPa) and Yield strength Sy (MPa) for ISO 898-1 grades
   const gradeData = {
-    '8.8': { Sp: 600, Sy: 640, Sut: 800 },
-    '10.9': { Sp: 830, Sy: 940, Sut: 1040 },
-    '12.9': { Sp: 970, Sy: 1100, Sut: 1220 },
-    'A2-70': { Sp: 450, Sy: 450, Sut: 700 }
+    '8.8': { Sp: 600, Sy: 640 },
+    '10.9': { Sp: 830, Sy: 940 },
+    '12.9': { Sp: 970, Sy: 1100 },
+    'A2-70': { Sp: 450, Sy: 450 }
   };
 
   function recalculateBolt() {
@@ -244,13 +222,10 @@ function initFastenerCalculator() {
     const b = boltData[size] || boltData['M10'];
     const g = gradeData[grade] || gradeData['8.8'];
 
-    // Preload Fi = 0.75 * At * Sp
     const preloadN = 0.75 * b.At * g.Sp;
     const preloadkN = preloadN / 1000;
 
-    // Normal working stress under pure tension
-    const totalForce = appliedLoadN;
-    const stressMPa = totalForce / b.At;
+    const stressMPa = appliedLoadN / b.At;
     const safetyFactor = g.Sy / (stressMPa || 1);
 
     const outPreload = document.getElementById('res-bolt-preload');
@@ -280,7 +255,7 @@ function initFastenerCalculator() {
 }
 
 /* ==========================================================================
-   6. Contact Form Dispatcher
+   6. Contact / Recruiter Inquiry Handler
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('engineering-inquiry-form');
@@ -291,17 +266,17 @@ function initContactForm() {
     const name = document.getElementById('inquiry-name')?.value || '';
     const email = document.getElementById('inquiry-email')?.value || '';
     const org = document.getElementById('inquiry-org')?.value || '';
-    const type = document.getElementById('inquiry-type')?.value || 'NPD Consultation';
+    const type = document.getElementById('inquiry-type')?.value || 'Job Opportunity';
     const message = document.getElementById('inquiry-message')?.value || '';
 
-    const subject = encodeURIComponent(`[Engineering Inquiry] ${type} from ${name}`);
+    const subject = encodeURIComponent(`[Portfolio Contact] ${type} from ${name}`);
     const body = encodeURIComponent(
       `Hello Moulish,\n\n` +
-      `Inquiry Category: ${type}\n` +
+      `Category: ${type}\n` +
       `From: ${name} (${email})\n` +
-      `Organization: ${org}\n\n` +
-      `Project Brief / Scope:\n${message}\n\n` +
-      `Dispatched via Moulish Kumar R Web Portfolio.`
+      `Company / Organization: ${org}\n\n` +
+      `Message / Opportunity Details:\n${message}\n\n` +
+      `Sent via Moulish Kumar R Portfolio.`
     );
 
     const mailtoUrl = `mailto:moulimano0305@gmail.com?subject=${subject}&body=${body}`;
@@ -315,10 +290,10 @@ function initContactForm() {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
           </svg>
           <div>
-            <h4 class="font-display text-sm font-semibold text-emerald-900">Inquiry Brief Compiled!</h4>
-            <p class="text-xs text-emerald-700 mt-0.5">Opening your default mail client to dispatch to <strong>moulimano0305@gmail.com</strong>.</p>
-            <a href="${mailtoUrl}" class="inline-flex items-center gap-1.5 mt-2 text-xs font-mono font-semibold text-primary underline">
-              Click here if email client doesn't open automatically &rarr;
+            <h4 class="font-display text-sm font-semibold text-emerald-900">Message Ready to Dispatch!</h4>
+            <p class="text-xs text-emerald-700 mt-0.5">Opening your default email app to email <strong>moulimano0305@gmail.com</strong>.</p>
+            <a href="${mailtoUrl}" class="inline-flex items-center gap-1 mt-2 text-xs font-mono font-semibold text-primary underline">
+              Click here to send directly via mail client &rarr;
             </a>
           </div>
         </div>
