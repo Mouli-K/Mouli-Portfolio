@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education, Certifications & Recognition | Moulish Kumar R</title>
+  <meta name="description" content="Academic credentials, M.Tech from BITS Pilani (84%), B.Tech from SASTRA (78%), CSWP certification, ASME Y14.5 GD&T certification, and LTTS OpenHack award of Moulish Kumar R.">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#f8fafc',
+            surface: '#ffffff',
+            'surface-subtle': '#f1f5f9',
+            primary: {
+              DEFAULT: '#0284c7',
+              dark: '#0369a1',
+              light: '#e0f2fe'
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="bg-canvas text-slate-900 font-body antialiased flex flex-col min-h-screen">
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded bg-slate-900 text-white flex items-center justify-center font-mono font-bold text-sm tracking-tighter border border-slate-700 shadow-sm group-hover:bg-primary transition">
+            MK
+          </div>
+          <div>
+            <div class="font-display font-bold text-sm tracking-tight text-slate-900 group-hover:text-primary transition">
+              MOULISH KUMAR R
+            </div>
+            <div class="font-mono text-[10px] tracking-wider text-slate-500 uppercase">
+              Mechanical Design &bull; NPD
+            </div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="index.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Overview</a>
+          <a href="works.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Works</a>
+          <a href="projects.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Projects</a>
+          <a href="skills.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Skills</a>
+          <a href="education.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-primary font-semibold border-b-2 border-primary transition">Education</a>
+          <a href="contact.html" class="nav-link px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-slate-600 hover:text-primary transition">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono font-medium rounded bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 transition shadow-sm">
+            <svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span>Resume DOCX</span>
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded bg-primary hover:bg-primary-dark text-white transition shadow-sm">
+            <span>Inquire</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+        <div class="flex md:hidden items-center gap-2">
+          <button id="mobile-menu-btn" class="p-2 text-slate-600 hover:text-slate-900 rounded focus:outline-none" aria-label="Toggle Navigation">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1">
+      <a href="index.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Overview</a>
+      <a href="works.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Works &amp; Experience</a>
+      <a href="projects.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Engineering Projects</a>
+      <a href="skills.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Skills &amp; Tooling</a>
+      <a href="education.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-primary font-bold bg-slate-50">Education &amp; Honors</a>
+      <a href="contact.html" class="block px-3 py-2 rounded text-xs font-mono uppercase tracking-wider text-slate-700 hover:bg-slate-50">Contact &amp; Consultation</a>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO BANNER
+       ========================================================================== -->
+  <main class="flex-grow">
+    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-300 shadow-sm mb-4">
+            <span class="w-2 h-2 rounded-full bg-primary status-pulse"></span>
+            <span class="font-mono text-xs font-medium text-slate-700 uppercase tracking-wider">
+              ACADEMIC DEGREES &bull; CERTIFICATIONS &bull; AWARDS
+            </span>
+          </div>
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Education &amp; Professional Credentials
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
+            Rigorous post-graduate training in Design Engineering from <strong>BITS Pilani</strong> and foundational Mechanical Engineering from <strong>SASTRA Deemed University</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       ACADEMIC DEGREES
+       ========================================================================== -->
+    <section class="py-16 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 class="font-display text-2xl font-bold text-slate-900 mb-8 pb-3 border-b border-slate-200">
+          Formal Academic Degrees
+        </h2>
+
+        <div class="space-y-8">
+          
+          <!-- Degree 1: M.Tech BITS Pilani -->
+          <div class="spec-card p-6 sm:p-8 cad-bracket bg-white">
+            <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-slate-200 gap-4">
+              <div>
+                <div class="flex items-center gap-2 font-mono text-xs text-primary font-bold tracking-widest uppercase">
+                  <span>POST-GRADUATE DEGREE</span>
+                  <span>&bull;</span>
+                  <span>WILP</span>
+                </div>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+                  M.Tech in Design Engineering
+                </h3>
+                <div class="text-xs sm:text-sm font-mono text-slate-600 mt-0.5">
+                  <strong>Birla Institute of Technology &amp; Science (BITS Pilani)</strong> &bull; Vidya Vihar, Pilani, Rajasthan
+                </div>
+              </div>
+              <div class="flex flex-col items-start md:items-end">
+                <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono text-xs font-bold">
+                  Completed 2026 &bull; 84% Grade
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 mt-1">First Class with Distinction</span>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p>
+                Advanced graduate curriculum focused on solid mechanics, finite element analysis, computational structural mechanics, material characterization, and mechanical optimization.
+              </p>
+              <div class="p-4 bg-slate-50 rounded border border-slate-200 text-xs font-mono space-y-1.5">
+                <div class="text-slate-900 font-bold">Dissertation Title:</div>
+                <div class="text-slate-700 italic">"Multi-Domain Optimization of Automotive Leaf Springs via Structural Geometry, Joint Architecture, and Hybrid Material Integration"</div>
+                <div class="text-slate-500 pt-1">Carried out at L&T Technology Services &bull; Evaluated 75 configurations &bull; 28% simulated mass savings.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Degree 2: B.Tech SASTRA -->
+          <div class="spec-card p-6 sm:p-8 cad-bracket bg-white">
+            <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-slate-200 gap-4">
+              <div>
+                <div class="flex items-center gap-2 font-mono text-xs text-slate-500 font-bold tracking-widest uppercase">
+                  <span>UNDERGRADUATE DEGREE</span>
+                </div>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+                  B.Tech in Mechanical Engineering
+                </h3>
+                <div class="text-xs sm:text-sm font-mono text-slate-600 mt-0.5">
+                  <strong>SASTRA Deemed to be University</strong> &bull; School of Mechanical Engineering &bull; Thanjavur, Tamil Nadu
+                </div>
+              </div>
+              <div class="flex flex-col items-start md:items-end">
+                <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-300 font-mono text-xs font-bold">
+                  Graduated 2022 &bull; 78% Grade
+                </span>
+                <span class="text-[11px] font-mono text-slate-400 mt-1">First Class</span>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p>
+                Core engineering fundamentals encompassing machine design, mechanics of solids, fluid mechanics, heat transfer, CAD/CAM, engineering metallurgy, metrology, and manufacturing processes.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 text-xs font-mono">
+                <div class="p-3 bg-slate-50 rounded border border-slate-200">
+                  <div class="font-bold text-slate-800">MEC 400 Major Project Work:</div>
+                  <div class="text-slate-600 mt-0.5">PLA Reinforced Coir Fibre Polymer Composite via Stir Casting.</div>
+                </div>
+                <div class="p-3 bg-slate-50 rounded border border-slate-200">
+                  <div class="font-bold text-slate-800">MEC 300 Mini Project Work:</div>
+                  <div class="text-slate-600 mt-0.5">Effect of Laser Shock Peening on ZE41 Mg Alloy Microstructure &amp; UTS (+25.4%).</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       PROFESSIONAL CERTIFICATIONS
+       ========================================================================== -->
+    <section class="py-16 bg-canvas border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 class="font-display text-2xl font-bold text-slate-900 mb-8 pb-3 border-b border-slate-200">
+          Professional Certifications &amp; Accreditations
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Cert 1: CSWP -->
+          <div class="spec-card p-6 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
+                <span class="text-primary font-bold">DASSAULT SYSTÈMES</span>
+                <span>GLOBAL CREDENTIAL</span>
+              </div>
+              <h3 class="font-display font-bold text-slate-900 text-lg mb-2">
+                Certified SolidWorks Professional (CSWP)
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Formal certification demonstrating advanced competencies in parametric modeling, complex part geometry, assembly kinematic constraints, configuration tables, mass property evaluation, and manufacturing drawing production.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-slate-500">
+              <span>Standard: CSWP Core</span>
+              <span class="text-emerald-600 font-semibold">&check; Verified</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: ASME Y14.5 GD&T -->
+          <div class="spec-card p-6 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-3">
+                <span class="text-primary font-bold">ASME Y14.5 STANDARD</span>
+                <span>SEP 2026</span>
+              </div>
+              <h3 class="font-display font-bold text-slate-900 text-lg mb-2">
+                ASME Y14.5 GD&T Certification
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Certified through <strong>aCADemix / EGS Computers India</strong>. Mastery of geometric characteristics, feature control frames, datum reference frames (DRF), material condition modifiers (MMC, LMC, RFS), and tolerance stack-up analysis.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs text-slate-500">
+              <span>Issuer: aCADemix / EGS</span>
+              <span class="text-emerald-600 font-semibold">&check; Verified</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       HONORS & RECOGNITION
+       ========================================================================== -->
+    <section class="py-16 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 class="font-display text-2xl font-bold text-slate-900 mb-8 pb-3 border-b border-slate-200">
+          Honors &amp; Innovation Awards
+        </h2>
+
+        <div class="spec-card p-6 sm:p-8 bg-slate-900 text-white rounded-lg border border-slate-800">
+          <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 mb-4 border-b border-slate-800 gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-amber-400 text-slate-900 flex items-center justify-center font-bold">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              </div>
+              <div>
+                <span class="font-mono text-xs uppercase text-amber-400 font-bold tracking-wider">ANNUAL INNOVATION HACKATHON</span>
+                <h3 class="font-display text-xl font-bold">Employees' Choice Award for Innovative Solution</h3>
+              </div>
+            </div>
+            <span class="font-mono text-xs text-slate-400 px-3 py-1 rounded bg-slate-800 border border-slate-700">
+              LTTS OpenHack
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+            Voted by peers and engineering leadership across L&T Technology Services for developing an innovative technical concept that demonstrated outstanding creative problem-solving, manufacturability, and collaborative engineering value.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       NEXT STEPS / EXPLORE CTA
+       ========================================================================== -->
+    <section class="py-12 bg-canvas border-b border-slate-200 text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h3 class="font-display text-xl font-bold text-slate-900">
+          Ready to Connect or Discuss Technical Opportunities?
+        </h3>
+        <p class="text-sm text-slate-600 mt-1">
+          Reach out for consultation, role inquiries, or mechanical design collaborations.
+        </p>
+        <div class="mt-4 flex flex-wrap justify-center gap-3">
+          <a href="contact.html" class="px-5 py-2.5 rounded text-xs font-mono font-semibold bg-primary hover:bg-primary-dark text-white transition shadow">
+            Direct Contact &amp; Inquiries &rarr;
+          </a>
+          <a href="assets/docs/Moulish_Kumar_RNPD_Resume_2026.docx" download class="px-5 py-2.5 rounded text-xs font-mono text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 transition shadow-sm">
+            Download Resume (DOCX)
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="bg-white border-t border-slate-200 py-10 text-xs text-slate-500 font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="font-display font-bold text-slate-900 text-sm">MOULISH KUMAR R</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Education &amp; Credentials &bull; Mouli-Resume-2026</div>
+        </div>
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="index.html" class="hover:text-primary transition">Overview</a>
+          <a href="works.html" class="hover:text-primary transition">Works</a>
+          <a href="projects.html" class="hover:text-primary transition">Projects</a>
+          <a href="skills.html" class="hover:text-primary transition">Skills</a>
+          <a href="education.html" class="text-primary font-semibold">Education</a>
+          <a href="contact.html" class="hover:text-primary transition">Contact</a>
+        </div>
+        <div class="text-[11px] text-slate-400">
+          &copy; 2026 Moulish Kumar R.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

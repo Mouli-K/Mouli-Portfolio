@@ -1,0 +1,19 @@
+# OS Metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor & Office Temp Files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and Caches
+*.log
+.system_generated/
