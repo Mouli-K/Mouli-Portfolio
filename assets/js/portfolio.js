@@ -1,53 +1,115 @@
 /**
  * MOULISH KUMAR R - MECHANICAL DESIGN ENGINEER PORTFOLIO
- * Smooth Scrolling, Active ScrollSpy Navigation, Contact Form & Interactive Features
+ * Continuous Page Flow Controller: Fluid Transitions, Staggered Scroll Reveal, Scroll Progress
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initScrollSpy();
+  initScrollProgressBar();
+  initFlowReveal();
+  initNavigationHighlight();
   initMobileMenu();
   initContactForm();
-  initSmoothScroll();
+  initSmoothTransitions();
 });
 
 /* ==========================================================================
-   1. Active ScrollSpy Navigation Controller
+   1. Subtle Top Reading Scroll Progress Bar
    ========================================================================== */
-function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+function initScrollProgressBar() {
+  const progressBar = document.getElementById('scroll-progress-bar');
+  if (!progressBar) return;
 
-  if (!sections.length || !navLinks.length) return;
-
-  function onScroll() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (href && (href === `#${sectionId}` || href.endsWith(`#${sectionId}`))) {
-            link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
-            link.classList.remove('text-slate-600');
-          } else {
-            link.classList.remove('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
-            link.classList.add('text-slate-600');
-          }
-        });
-      }
-    });
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight <= 0) return;
+    const progress = (window.pageYOffset / totalHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+  }, { passive: true });
 }
 
 /* ==========================================================================
-   2. Mobile Navigation Menu Toggle
+   2. Scroll-Triggered Cascading Flow Reveal
+   ========================================================================== */
+function initFlowReveal() {
+  const elements = document.querySelectorAll('.flow-reveal');
+  if (!elements.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    elements.forEach((el, index) => {
+      // Add subtle stagger delay for sibling cards
+      const delay = (index % 4) * 0.08;
+      el.style.transitionDelay = `${delay}s`;
+      observer.observe(el);
+    });
+  } else {
+    // Fallback if observer not supported
+    elements.forEach(el => el.classList.add('is-visible'));
+  }
+}
+
+/* ==========================================================================
+   3. Active Navigation Page Highlighting
+   ========================================================================== */
+function initNavigationHighlight() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const cleanHref = href.split('/').pop().split('#')[0];
+
+    if (cleanHref === currentPath || (currentPath === '' && cleanHref === 'index.html')) {
+      link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+      link.classList.remove('text-slate-600');
+    } else {
+      link.classList.remove('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+      link.classList.add('text-slate-600');
+    }
+  });
+}
+
+/* ==========================================================================
+   4. Smooth Inter-Page Flow Transitions
+   Eliminates white flashes between pages, giving a fluid continuous feel
+   ========================================================================== */
+function initSmoothTransitions() {
+  const navLinks = document.querySelectorAll('a[href]:not([target="_blank"]):not([download]):not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])');
+  const main = document.querySelector('main');
+
+  if (!main) return;
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetUrl = this.getAttribute('href');
+      if (!targetUrl || targetUrl.startsWith('#')) return;
+
+      e.preventDefault();
+      main.style.transition = 'opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
+      main.style.opacity = '0';
+      main.style.transform = 'translateY(-6px)';
+
+      setTimeout(() => {
+        window.location.href = targetUrl;
+      }, 180);
+    });
+  });
+}
+
+/* ==========================================================================
+   5. Mobile Menu Toggle
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-btn');
@@ -72,22 +134,10 @@ function initMobileMenu() {
       `;
     }
   });
-
-  // Close mobile menu when clicking a link
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      toggleBtn.innerHTML = `
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      `;
-    });
-  });
 }
 
 /* ==========================================================================
-   3. Contact Form Handler
+   6. Contact Form Dispatcher
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('engineering-inquiry-form');
@@ -98,7 +148,7 @@ function initContactForm() {
     const name = document.getElementById('inquiry-name')?.value || '';
     const email = document.getElementById('inquiry-email')?.value || '';
     const org = document.getElementById('inquiry-org')?.value || '';
-    const type = document.getElementById('inquiry-type')?.value || 'Message';
+    const type = document.getElementById('inquiry-type')?.value || 'General Connect';
     const message = document.getElementById('inquiry-message')?.value || '';
 
     const subject = encodeURIComponent(`[Portfolio Message] ${type} from ${name}`);
@@ -122,10 +172,10 @@ function initContactForm() {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
           </svg>
           <div>
-            <h4 class="font-display text-sm font-semibold text-emerald-900">Message Ready!</h4>
+            <h4 class="font-display text-sm font-semibold text-emerald-900">Message Prepared!</h4>
             <p class="text-xs text-emerald-700 mt-0.5">Opening your default mail client to send to <strong>moulimano0305@gmail.com</strong>.</p>
             <a href="${mailtoUrl}" class="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-primary underline">
-              Click here to send directly via mail client &rarr;
+              Click here to dispatch directly &rarr;
             </a>
           </div>
         </div>
@@ -133,25 +183,5 @@ function initContactForm() {
     }
 
     window.location.href = mailtoUrl;
-  });
-}
-
-/* ==========================================================================
-   4. Smooth Anchor Scroll
-   ========================================================================== */
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      const targetEl = document.querySelector(targetId);
-      if (targetEl) {
-        e.preventDefault();
-        targetEl.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
   });
 }

@@ -39,6 +39,9 @@
 </head>
 <body class="bg-canvas text-slate-900 font-body antialiased flex flex-col min-h-screen">
 
+  <!-- Subtle Top Reading Scroll Progress Indicator -->
+  <div id="scroll-progress-bar"></div>
+
   <!-- ==========================================================================
        NAVIGATION BAR
        ========================================================================== -->
@@ -61,7 +64,7 @@
         </a>
 
         <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
-          <a href="index.html#overview" class="nav-link px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-primary transition">Overview</a>
+          <a href="index.html" class="nav-link px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-primary transition">Overview</a>
           <a href="works.html" class="nav-link px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-primary transition">Experience</a>
           <a href="projects.html" class="nav-link px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-primary transition">Projects</a>
           <a href="skills.html" class="nav-link px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600 hover:text-primary transition">Skills</a>
@@ -89,7 +92,7 @@
 
     <!-- Mobile Drawer -->
     <div id="mobile-nav-drawer" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1">
-      <a href="index.html#overview" class="block px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50">Overview</a>
+      <a href="index.html" class="block px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50">Overview</a>
       <a href="works.html" class="block px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50">Experience</a>
       <a href="projects.html" class="block px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50">Projects</a>
       <a href="skills.html" class="block px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50">Skills</a>
@@ -128,7 +131,7 @@
 
         <div class="space-y-6">
           
-          <div class="spec-card card-hover-pop p-6 sm:p-8 bg-white">
+          <div class="spec-card card-hover-pop flow-reveal p-6 sm:p-8 bg-white">
             <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-slate-200 gap-4">
               <div>
                 <span class="text-xs text-primary font-bold uppercase tracking-wider">POST-GRADUATE DEGREE &bull; WILP</span>
@@ -157,7 +160,7 @@
             </div>
           </div>
 
-          <div class="spec-card card-hover-pop p-6 sm:p-8 bg-white">
+          <div class="spec-card card-hover-pop flow-reveal p-6 sm:p-8 bg-white">
             <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-slate-200 gap-4">
               <div>
                 <span class="text-xs text-slate-500 font-bold uppercase tracking-wider">UNDERGRADUATE DEGREE</span>
@@ -209,8 +212,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           <!-- Emerson EDGE Award -->
-          <div class="spec-card card-hover-pop p-6 bg-white border-amber-200">
-            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+          <div class="spec-card card-hover-pop flow-reveal p-6 bg-white border-amber-200">
+            <div class="flex items-center justify-between pb-3 mb-3 border-slate-100 border-b">
               <span class="text-xs font-bold text-amber-700 uppercase">Emerson Award</span>
               <span class="text-xs font-medium text-slate-500">Fisher Control Valves</span>
             </div>
@@ -223,7 +226,7 @@
           </div>
 
           <!-- LTTS OpenHack Award -->
-          <div class="spec-card card-hover-pop p-6 bg-white border-amber-200">
+          <div class="spec-card card-hover-pop flow-reveal p-6 bg-white border-amber-200">
             <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
               <span class="text-xs font-bold text-amber-700 uppercase">LTTS Award</span>
               <span class="text-xs font-medium text-slate-500">LTTS OpenHack</span>
@@ -253,7 +256,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          <div class="spec-card card-hover-pop p-6 bg-white">
+          <div class="spec-card card-hover-pop flow-reveal p-6 bg-white">
             <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
               <span class="text-primary font-bold">DASSAULT SYSTÈMES</span>
               <span>GLOBAL CREDENTIAL</span>
@@ -270,7 +273,7 @@
             </div>
           </div>
 
-          <div class="spec-card card-hover-pop p-6 bg-white">
+          <div class="spec-card card-hover-pop flow-reveal p-6 bg-white">
             <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
               <span class="text-primary font-bold">ACADEMIX / EGS COMPUTERS</span>
               <span>SEP 2026</span>
@@ -305,7 +308,7 @@
           <div class="text-[11px] text-slate-400 mt-0.5">Education &amp; Credentials &bull; Mouli-Resume-2026</div>
         </div>
         <div class="flex flex-wrap items-center gap-5">
-          <a href="index.html#overview" class="hover:text-primary transition">Overview</a>
+          <a href="index.html" class="hover:text-primary transition">Overview</a>
           <a href="works.html" class="hover:text-primary transition">Experience</a>
           <a href="projects.html" class="hover:text-primary transition">Projects</a>
           <a href="skills.html" class="hover:text-primary transition">Skills</a>
