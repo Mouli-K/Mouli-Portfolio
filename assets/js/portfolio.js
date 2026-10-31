@@ -1,6 +1,6 @@
 /**
  * MOULISH KUMAR R - MECHANICAL DESIGN ENGINEER PORTFOLIO
- * Continuous Page Flow Controller: Fluid Transitions, Staggered Scroll Reveal, Scroll Progress
+ * Page Flow Controller: Staggered Scroll Reveal, Scroll Progress, Active Nav Highlighting
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigationHighlight();
   initMobileMenu();
   initContactForm();
-  initSmoothTransitions();
+});
+
+// Ensure page and content are fully visible when restored from back/forward cache (bfcache)
+window.addEventListener('pageshow', () => {
+  const main = document.querySelector('main');
+  if (main) {
+    main.style.opacity = '1';
+    main.style.transform = 'none';
+  }
 });
 
 /* ==========================================================================
@@ -61,17 +69,20 @@ function initFlowReveal() {
 
 /* ==========================================================================
    3. Active Navigation Page Highlighting
+   Handles both clean extensionless URLs (/works) and direct files (works.html)
    ========================================================================== */
 function initNavigationHighlight() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname.split('/').filter(Boolean).pop() || 'index';
+  const currentBase = path.replace('.html', '').toLowerCase();
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
     const cleanHref = href.split('/').pop().split('#')[0];
+    const linkBase = cleanHref.replace('.html', '').toLowerCase();
 
-    if (cleanHref === currentPath || (currentPath === '' && cleanHref === 'index.html')) {
+    if (linkBase === currentBase || (currentBase === 'index' && (linkBase === 'index' || linkBase === ''))) {
       link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
       link.classList.remove('text-slate-600');
     } else {
@@ -82,34 +93,7 @@ function initNavigationHighlight() {
 }
 
 /* ==========================================================================
-   4. Smooth Inter-Page Flow Transitions
-   Eliminates white flashes between pages, giving a fluid continuous feel
-   ========================================================================== */
-function initSmoothTransitions() {
-  const navLinks = document.querySelectorAll('a[href]:not([target="_blank"]):not([download]):not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])');
-  const main = document.querySelector('main');
-
-  if (!main) return;
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetUrl = this.getAttribute('href');
-      if (!targetUrl || targetUrl.startsWith('#')) return;
-
-      e.preventDefault();
-      main.style.transition = 'opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
-      main.style.opacity = '0';
-      main.style.transform = 'translateY(-6px)';
-
-      setTimeout(() => {
-        window.location.href = targetUrl;
-      }, 180);
-    });
-  });
-}
-
-/* ==========================================================================
-   5. Mobile Menu Toggle
+   4. Mobile Menu Toggle
    ========================================================================== */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-btn');
@@ -137,7 +121,7 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   6. Contact Form Dispatcher
+   5. Contact Form Dispatcher
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('engineering-inquiry-form');
