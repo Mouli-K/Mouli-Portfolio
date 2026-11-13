@@ -49,6 +49,9 @@ Portfolio - 1/
     │   ├── moulish-presentation.jpg   # Best photo (Hero / Presentation)
     │   └── moulish-profile.jpg        # Profile photo (Emerson polo)
     └── docs/
+        ├── Moulish_Kumar_R - NPD - 2026.pdf
+        ├── Moulish_Kumar_R - NPD - 2026.docx
+        ├── Moulish_Kumar_RNPD_Resume_2026.pdf
         ├── Moulish_Kumar_RNPD_Resume_2026.docx
         ├── Leaf_Springs_MultiDomain_Optimization_Dissertation.pdf
         ├── Laser_Shock_Peening_ZE41_Mg_Report.pdf
