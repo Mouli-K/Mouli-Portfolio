@@ -18,27 +18,28 @@
       theme: {
         extend: {
           colors: {
-            navy: {
-              950: '#070c1a',
-              900: '#0b132b',
-              850: '#0e1838',
-              800: '#14234d',
-              700: '#1c3166'
-            },
             cream: {
               50: '#fdfbf7',
-              100: '#f7f2e7',
-              200: '#ede4d1',
-              300: '#dcd0b8',
-              400: '#b8aa90',
-              muted: '#9e937d'
+              100: '#faf6ee',
+              200: '#f5f0e6',
+              300: '#ede6d6',
+              400: '#ded4c0',
+              subtle: '#e8dfcb'
+            },
+            navy: {
+              headings: '#0a1430',
+              text: '#172445',
+              body: '#25355a',
+              muted: '#536487',
+              dim: '#8493b0',
+              card: 'rgba(255, 255, 255, 0.85)'
             },
             coral: {
               DEFAULT: '#ff6f59',
-              hover: '#ff836f',
-              dark: '#e55540',
-              soft: 'rgba(255, 111, 89, 0.14)',
-              glow: 'rgba(255, 111, 89, 0.35)'
+              hover: '#ff573d',
+              dark: '#e54c33',
+              soft: 'rgba(255, 111, 89, 0.12)',
+              glow: 'rgba(255, 111, 89, 0.28)'
             }
           },
           fontFamily: {
@@ -51,7 +52,7 @@
   </script>
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
-<body class="bg-navy-900 text-cream-200 font-body antialiased flex flex-col min-h-screen selection:bg-coral selection:text-navy-950">
+<body class="bg-cream-100 text-navy-body font-body antialiased flex flex-col min-h-screen selection:bg-coral selection:text-white">
 
   <!-- Snappy Top Reading Scroll Progress Indicator -->
   <div id="scroll-progress-bar"></div>
@@ -64,26 +65,26 @@
       <div class="flex items-center justify-between h-16">
         
         <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-coral/50 rounded-lg p-1">
-          <div class="w-9 h-9 rounded-lg bg-navy-800 border border-cream-100/15 text-coral flex items-center justify-center font-bold text-sm tracking-tight shadow-md group-hover:border-coral/40 group-hover:scale-105 transition duration-150">
+          <div class="w-9 h-9 rounded-lg bg-white border border-navy-headings/15 text-coral flex items-center justify-center font-bold text-sm tracking-tight shadow-sm group-hover:border-coral/50 group-hover:scale-105 transition duration-150">
             MK
           </div>
           <div>
-            <div class="font-display font-bold text-sm tracking-tight text-cream-100 group-hover:text-coral transition duration-150">
+            <div class="font-display font-bold text-sm tracking-tight text-navy-headings group-hover:text-coral transition duration-150">
               MOULISH KUMAR R
             </div>
-            <div class="text-[11px] font-medium text-cream-muted">
+            <div class="text-[11px] font-medium text-navy-muted">
               Mechanical Design &bull; Emerson Fisher
             </div>
           </div>
         </a>
 
         <nav class="hidden lg:flex items-center space-x-1 lg:space-x-2">
-          <a href="index.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Overview</a>
+          <a href="index.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Overview</a>
           <a href="works.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-coral border-b-2 border-coral transition">Experience</a>
-          <a href="projects.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Projects</a>
-          <a href="skills.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Skills</a>
-          <a href="education.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Education &amp; Awards</a>
-          <a href="contact.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Contact</a>
+          <a href="projects.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Projects</a>
+          <a href="skills.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Skills</a>
+          <a href="education.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Education &amp; Awards</a>
+          <a href="contact.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Contact</a>
         </nav>
 
         <div class="hidden sm:flex items-center gap-3">
@@ -97,7 +98,7 @@
         </div>
 
         <div class="flex lg:hidden items-center gap-2">
-          <button id="mobile-menu-btn" class="p-2.5 text-cream-200 hover:text-coral rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40" aria-label="Toggle Navigation">
+          <button id="mobile-menu-btn" class="p-2.5 text-navy-headings hover:text-coral rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40" aria-label="Toggle Navigation">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
         </div>
@@ -105,13 +106,13 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-cream-100/10 bg-navy-950/95 backdrop-blur-xl px-4 pt-2 pb-5 space-y-1">
-      <a href="index.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Overview</a>
-      <a href="works.html" class="block text-xs font-semibold uppercase tracking-wider text-coral bg-navy-800/80 border border-coral/30">Experience</a>
-      <a href="projects.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Projects</a>
-      <a href="skills.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Skills</a>
-      <a href="education.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Education &amp; Awards</a>
-      <a href="contact.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Contact</a>
+    <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-navy-headings/10 bg-cream-50/98 backdrop-blur-xl px-4 pt-2 pb-5 space-y-1 shadow-lg">
+      <a href="index.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Overview</a>
+      <a href="works.html" class="block text-xs font-semibold uppercase tracking-wider text-coral bg-white border border-coral/30 shadow-sm">Experience</a>
+      <a href="projects.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Projects</a>
+      <a href="skills.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Skills</a>
+      <a href="education.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Education &amp; Awards</a>
+      <a href="contact.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Contact</a>
     </div>
   </header>
 
@@ -119,14 +120,14 @@
        HERO BANNER
        ========================================================================== -->
   <main class="flex-grow">
-    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-cream-100/10">
+    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="text-xs font-bold uppercase tracking-wider text-coral">DOCUMENTED INDUSTRIAL CAREER</span>
-          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-cream-100 tracking-tight leading-tight mt-1">
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-headings tracking-tight leading-tight mt-1">
             Work Experience
           </h1>
-          <p class="text-base sm:text-lg text-cream-300 mt-2 leading-relaxed">
+          <p class="text-base sm:text-lg text-navy-muted mt-2 leading-relaxed">
             4 years of proven engineering execution across severe-service control valves at <strong>Emerson (Fisher)</strong> and automotive exhaust systems at <strong>L&T Technology Services</strong>.
           </p>
         </div>
@@ -136,19 +137,19 @@
     <!-- ==========================================================================
          ROLE 1: EMERSON (FISHER CONTROL VALVES) - STAGED FOCUS
          ========================================================================== -->
-    <section id="emerson" class="py-14 bg-navy-900 border-b border-cream-100/10">
+    <section id="emerson" class="py-14 bg-cream-100 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="glass-card stage-focus p-6 sm:p-8">
           
           <!-- Role Header -->
-          <div class="flex flex-col md:flex-row md:items-start justify-between pb-6 mb-6 border-b border-cream-100/10 gap-4">
+          <div class="flex flex-col md:flex-row md:items-start justify-between pb-6 mb-6 border-b border-navy-headings/10 gap-4">
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">Current Role</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-300">Current Role</span>
                 <span class="badge-coral">★ Emerson EDGE Award Recipient</span>
               </div>
-              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-cream-100">
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-navy-headings">
                 Design Engineer &ndash; New Product Development (NPD)
               </h2>
               <div class="text-sm font-semibold text-coral mt-1">
@@ -156,7 +157,7 @@
               </div>
             </div>
             
-            <div class="text-xs font-medium text-cream-muted md:text-right">
+            <div class="text-xs font-medium text-navy-muted md:text-right">
               <span class="text-coral font-bold text-sm block">Nov 2025 &ndash; Present</span>
               <div>Chennai, Tamil Nadu, India</div>
             </div>
@@ -164,92 +165,92 @@
 
           <!-- Major NPD Projects Spotlight Strip -->
           <div class="mb-8">
-            <h3 class="font-display font-bold text-cream-100 text-base mb-3 flex items-center gap-2">
+            <h3 class="font-display font-bold text-navy-headings text-base mb-3 flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-coral"></span>
               <span>Major NPD Programs Under Active Development</span>
             </h3>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="p-4 rounded-xl bg-navy-800/80 border border-coral/30">
+              <div class="p-4 rounded-xl bg-white border border-coral/40 shadow-xs">
                 <div class="text-xs font-bold text-coral uppercase tracking-wider mb-1">PROGRAM 01</div>
-                <div class="font-display font-bold text-cream-100 text-sm">High-Pressure Control Valve NPD</div>
-                <p class="text-xs text-cream-300 mt-1 leading-relaxed">Functional requirements to parametric 3D CAD, ASME Section VIII &amp; B16.34 sizing, bolt preload calculations, and trial builds.</p>
+                <div class="font-display font-bold text-navy-headings text-sm">High-Pressure Control Valve NPD</div>
+                <p class="text-xs text-navy-muted mt-1 leading-relaxed">Functional requirements to parametric 3D CAD, ASME Section VIII &amp; B16.34 sizing, bolt preload calculations, and trial builds.</p>
               </div>
 
-              <div class="p-4 rounded-xl bg-navy-800/80 border border-cream-100/15">
+              <div class="p-4 rounded-xl bg-white border border-navy-headings/10 shadow-xs">
                 <div class="text-xs font-bold text-coral uppercase tracking-wider mb-1">PROGRAM 02</div>
-                <div class="font-display font-bold text-cream-100 text-sm">Butterfly Valve Rebranding</div>
-                <p class="text-xs text-cream-300 mt-1 leading-relaxed">Rebranding acquired High-Performance Butterfly valve into company standard through market gap analysis, product gap analysis, decision matrix, and detailed documentation.</p>
+                <div class="font-display font-bold text-navy-headings text-sm">Butterfly Valve Rebranding</div>
+                <p class="text-xs text-navy-muted mt-1 leading-relaxed">Rebranding acquired High-Performance Butterfly valve into company standard through market gap analysis, product gap analysis, decision matrix, and detailed documentation.</p>
               </div>
 
-              <div class="p-4 rounded-xl bg-navy-800/80 border border-cream-100/15">
+              <div class="p-4 rounded-xl bg-white border border-navy-headings/10 shadow-xs">
                 <div class="text-xs font-bold text-coral uppercase tracking-wider mb-1">PROGRAM 03</div>
-                <div class="font-display font-bold text-cream-100 text-sm">Full Bore Ball Valve Size Expansion</div>
-                <p class="text-xs text-cream-300 mt-1 leading-relaxed">Expanding valve line portfolio: parametric CAD modeling, manufacturing drawing definitions, fit tolerances, and BOM structures.</p>
+                <div class="font-display font-bold text-navy-headings text-sm">Full Bore Ball Valve Size Expansion</div>
+                <p class="text-xs text-navy-muted mt-1 leading-relaxed">Expanding valve line portfolio: parametric CAD modeling, manufacturing drawing definitions, fit tolerances, and BOM structures.</p>
               </div>
             </div>
           </div>
 
           <!-- Detailed Responsibilities Grid (Direct from Resume) -->
-          <h3 class="font-display font-bold text-cream-100 text-base mb-4">
+          <h3 class="font-display font-bold text-navy-headings text-base mb-4">
             Key Engineering Functions &amp; Factory-Facing Execution
           </h3>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-cream-300 leading-relaxed">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-navy-body leading-relaxed">
             
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">01. Component Design &amp; Parametric Modeling</strong>
+            <div class="p-4 rounded-xl bg-white/90 border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">01. Component Design &amp; Parametric Modeling</strong>
               <p>Develop mechanical components for high-pressure control valves and ball valve expanding sizes, translating functional specifications into design concepts, parametric 3D models (Siemens NX, Creo, SolidWorks), engineering drawings, and manufacturing-ready part definitions.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">02. Calculation-Led Design &amp; Tolerances</strong>
+            <div class="p-4 rounded-xl bg-white/90 border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">02. Calculation-Led Design &amp; Tolerances</strong>
               <p>Apply mechanical and dimensional calculations to evaluate design alternatives and component geometry. Assess engineering tolerances, fits, interfacial clearances, bolt preloads, and assembly interfaces before detailed design release.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">03. Simulation &amp; Material Evaluation</strong>
+            <div class="p-4 rounded-xl bg-white/90 border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">03. Simulation &amp; Material Evaluation</strong>
               <p>Support component design decisions through finite element analysis (FEA), evaluation of material suitability, and iterative assessment of mechanical performance based on material combinations and design constraints for extreme pressures.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">04. Standards Compliance (ASME Section VIII &amp; GD&T)</strong>
+            <div class="p-4 rounded-xl bg-white/90 border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">04. Standards Compliance (ASME Section VIII &amp; GD&T)</strong>
               <p>Implement applicable <strong>ASME Section VIII</strong> valve design requirements, <strong>ASME B16.34</strong> pressure-temperature standards, and strict <strong>ASME Y14.5</strong> GD&amp;T principles during component design creation and drawing reviews.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">05. Factory Floor Trials &amp; Design Iteration</strong>
+            <div class="p-4 rounded-xl bg-white/90 border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">05. Factory Floor Trials &amp; Design Iteration</strong>
               <p>Work directly with factory manufacturing and quality teams to evaluate trial-build feedback, investigate part fit or assembly issues, and revise engineering designs based on practical production observations.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">06. Pipeline ECRN &amp; Cross-Functional Trade-Offs</strong>
+            <div class="p-4 rounded-xl bg-white/90 border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">06. Pipeline ECRN &amp; Cross-Functional Trade-Offs</strong>
               <p>Execute Engineering Change Request/Notice (ECRN) activities for pipeline products according to customer requirements. Collaborate across design, manufacturing, and quality to resolve trade-offs involving functionality, manufacturability, and component selection.</p>
             </div>
 
           </div>
 
           <!-- Digital Systems & Workplace Automation Projects -->
-          <div class="mt-6 pt-6 border-t border-cream-100/10">
+          <div class="mt-6 pt-6 border-t border-navy-headings/10">
             <h4 class="font-display font-bold text-coral text-xs uppercase tracking-wider mb-3">
               Workplace Projects &amp; Digital Engineering Automation
             </h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
               
-              <div class="p-3.5 rounded-lg bg-navy-800/70 border border-cream-100/10">
-                <div class="font-bold text-cream-100 mb-1">Microsoft Power Apps &bull; NPD Tracker</div>
-                <p class="text-cream-300">Designed and built a custom Power Apps tool for tracking NPD project activities, work status, and open items, providing a shared view for team follow-up.</p>
+              <div class="p-3.5 rounded-lg bg-white border border-navy-headings/10 shadow-2xs">
+                <div class="font-bold text-navy-headings mb-1">Microsoft Power Apps &bull; NPD Tracker</div>
+                <p class="text-navy-muted">Designed and built a custom Power Apps tool for tracking NPD project activities, work status, and open items, providing a shared view for team follow-up.</p>
               </div>
 
-              <div class="p-3.5 rounded-lg bg-navy-800/70 border border-cream-100/10">
-                <div class="font-bold text-cream-100 mb-1">Python Drawing Comparison Software</div>
-                <p class="text-cream-300">Developed an in-house Python application to automate version comparisons between legacy and updated engineering drawings, accelerating review cycles for design engineers and checkers.</p>
+              <div class="p-3.5 rounded-lg bg-white border border-navy-headings/10 shadow-2xs">
+                <div class="font-bold text-navy-headings mb-1">Python Drawing Comparison Software</div>
+                <p class="text-navy-muted">Developed an in-house Python application to automate version comparisons between legacy and updated engineering drawings, accelerating review cycles for design engineers and checkers.</p>
               </div>
 
-              <div class="p-3.5 rounded-lg bg-navy-800/70 border border-cream-100/10">
-                <div class="font-bold text-cream-100 mb-1">SolidWorks VBA Macros &amp; Quiz Portal</div>
-                <p class="text-cream-300">Built custom SolidWorks VBA macros to streamline repetitive CAD workflows and created a web-based Quiz Portal to improve team’s technical compatibility and standards fluency.</p>
+              <div class="p-3.5 rounded-lg bg-white border border-navy-headings/10 shadow-2xs">
+                <div class="font-bold text-navy-headings mb-1">SolidWorks VBA Macros &amp; Quiz Portal</div>
+                <p class="text-navy-muted">Built custom SolidWorks VBA macros to streamline repetitive CAD workflows and created a web-based Quiz Portal to improve team’s technical compatibility and standards fluency.</p>
               </div>
 
             </div>
@@ -263,18 +264,18 @@
     <!-- ==========================================================================
          ROLE 2: L&T TECHNOLOGY SERVICES
          ========================================================================== -->
-    <section id="ltts" class="py-14 bg-navy-850 border-b border-cream-100/10">
+    <section id="ltts" class="py-14 bg-cream-200/70 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="glass-card p-6 sm:p-8">
           
-          <div class="flex flex-col md:flex-row md:items-start justify-between pb-6 mb-6 border-b border-cream-100/10 gap-4">
+          <div class="flex flex-col md:flex-row md:items-start justify-between pb-6 mb-6 border-b border-navy-headings/10 gap-4">
             <div>
               <div class="flex items-center gap-2 mb-2">
                 <span class="badge-coral">★ Employees' Choice Award &bull; LTTS OpenHack</span>
-                <span class="px-2.5 py-0.5 rounded-full bg-navy-800 text-cream-muted text-xs font-semibold border border-cream-100/15">3+ Years Tenure</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-white text-navy-muted text-xs font-semibold border border-navy-headings/10">3+ Years Tenure</span>
               </div>
-              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-cream-100">
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-navy-headings">
                 Engineer &ndash; Automotive Exhaust Design &amp; Development
               </h2>
               <div class="text-sm font-semibold text-coral mt-1">
@@ -282,46 +283,46 @@
               </div>
             </div>
             
-            <div class="text-xs font-medium text-cream-muted md:text-right">
+            <div class="text-xs font-medium text-navy-muted md:text-right">
               <span class="text-coral font-bold text-sm block">Sep 2022 &ndash; Oct 2025</span>
               <div>Promoted to Engineer in Sep 2023</div>
             </div>
           </div>
 
-          <p class="text-sm text-cream-300 leading-relaxed mb-6">
+          <p class="text-sm text-navy-body leading-relaxed mb-6">
             Executed engineering design and reliability analysis for automotive sheet-metal exhaust systems and mounting brackets, focusing on weight reduction, structural integrity, modal vibration suppression, and production drawing release.
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-cream-300 leading-relaxed">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-navy-body leading-relaxed">
             
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">Mechanical &amp; Sheet Metal CAD Design</strong>
+            <div class="p-4 rounded-xl bg-white border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">Mechanical &amp; Sheet Metal CAD Design</strong>
               <p>Designed concepts and parametric CAD models of exhaust sheet-metal components and mounting brackets, considering weight, cost, material properties, structural performance, and manufacturability.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">Finite Element Analysis (FEA)</strong>
+            <div class="p-4 rounded-xl bg-white border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">Finite Element Analysis (FEA)</strong>
               <p>Performed structural, thermal, and vibration-related FEA/reliability studies to evaluate exhaust components and bracket designs, supporting engineering design revisions.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">Detail Engineering &amp; GD&T</strong>
+            <div class="p-4 rounded-xl bg-white border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">Detail Engineering &amp; GD&T</strong>
               <p>Created production-oriented 2D drawings with ASME Y14.5 GD&amp;T and assessed manufacturability of component and assembly concepts, including geometric and drafting feasibility.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/50 border border-cream-100/10 space-y-1">
-              <strong class="text-cream-100 block text-xs uppercase font-bold text-coral">CAD-to-Production Scan Validation</strong>
+            <div class="p-4 rounded-xl bg-white border border-navy-headings/10 space-y-1 shadow-2xs">
+              <strong class="text-navy-headings block text-xs uppercase font-bold text-coral">CAD-to-Production Scan Validation</strong>
               <p>Compared nominal CAD geometry with STL/3D scan data, developed parametric models from STL references, identified deviations, and proposed corrective design actions.</p>
             </div>
 
           </div>
 
           <!-- VAV Project Spotlight Strip -->
-          <div class="mt-6 p-4 rounded-xl bg-coral/10 border border-coral/25 text-cream-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div class="mt-6 p-4 rounded-xl bg-coral/10 border border-coral/25 text-navy-headings flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div>
               <div class="text-xs font-bold uppercase tracking-wider text-coral">KEY ACCOMPLISHMENT &bull; PRODUCTION ADOPTION</div>
-              <div class="font-display font-bold text-cream-100 text-sm mt-0.5">Major Single-Person VAV Project</div>
-              <p class="text-xs text-cream-300 mt-1">Considerably supported on a major single-person VAV project, which was highly appreciated by the automotive customer and successfully adopted into production.</p>
+              <div class="font-display font-bold text-navy-headings text-sm mt-0.5">Major Single-Person VAV Project</div>
+              <p class="text-xs text-navy-muted mt-1">Considerably supported on a major single-person VAV project, which was highly appreciated by the automotive customer and successfully adopted into production.</p>
             </div>
             <span class="badge-coral shrink-0">Production Adopted</span>
           </div>
@@ -334,13 +335,13 @@
     <!-- ==========================================================================
          FITTS'S LAW CALL TO ACTION
          ========================================================================== -->
-    <section class="py-12 bg-navy-900 border-b border-cream-100/10 text-center">
+    <section class="py-12 bg-cream-100 border-b border-navy-headings/10 text-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="font-display text-2xl font-bold text-cream-100">Looking for a Mechanical Design &amp; NPD Specialist?</h3>
-        <p class="text-xs sm:text-sm text-cream-300 mt-2">Download the complete updated resume document or get in touch directly.</p>
+        <h3 class="font-display text-2xl font-bold text-navy-headings">Looking for a Mechanical Design &amp; NPD Specialist?</h3>
+        <p class="text-xs sm:text-sm text-navy-muted mt-2">Download the complete updated resume document or get in touch directly.</p>
         <div class="flex flex-wrap items-center justify-center gap-3 mt-6">
           <a href="assets/docs/Moulish_Kumar_R - NPD - 2026.docx" download class="fitts-button-primary">
-            <svg class="w-4 h-4 mr-1 text-navy-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <svg class="w-4 h-4 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             <span>Download Updated Resume (DOCX)</span>
           </a>
           <a href="contact.html" class="fitts-button-secondary">
@@ -355,12 +356,12 @@
   <!-- ==========================================================================
        CLEAN GLASSMORPHIC FOOTER
        ========================================================================== -->
-  <footer class="bg-navy-950 border-t border-cream-100/10 py-8 text-xs text-cream-muted">
+  <footer class="bg-cream-200 border-t border-navy-headings/10 py-8 text-xs text-navy-muted">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
-          <div class="font-display font-bold text-cream-100 text-sm">MOULISH KUMAR R</div>
-          <div class="text-[11px] text-cream-muted mt-0.5">Work Experience &bull; Emerson Fisher &amp; L&amp;T Technology Services</div>
+          <div class="font-display font-bold text-navy-headings text-sm">MOULISH KUMAR R</div>
+          <div class="text-[11px] text-navy-muted mt-0.5">Work Experience &bull; Emerson Fisher &amp; L&amp;T Technology Services</div>
         </div>
         <div class="flex flex-wrap items-center gap-5">
           <a href="index.html" class="hover:text-coral transition">Overview</a>
@@ -370,7 +371,7 @@
           <a href="education.html" class="hover:text-coral transition">Education &amp; Awards</a>
           <a href="contact.html" class="hover:text-coral transition">Contact</a>
         </div>
-        <div class="text-[11px] text-cream-dim">
+        <div class="text-[11px] text-navy-dim">
           &copy; 2026 Moulish Kumar R.
         </div>
       </div>

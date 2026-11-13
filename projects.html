@@ -18,27 +18,28 @@
       theme: {
         extend: {
           colors: {
-            navy: {
-              950: '#070c1a',
-              900: '#0b132b',
-              850: '#0e1838',
-              800: '#14234d',
-              700: '#1c3166'
-            },
             cream: {
               50: '#fdfbf7',
-              100: '#f7f2e7',
-              200: '#ede4d1',
-              300: '#dcd0b8',
-              400: '#b8aa90',
-              muted: '#9e937d'
+              100: '#faf6ee',
+              200: '#f5f0e6',
+              300: '#ede6d6',
+              400: '#ded4c0',
+              subtle: '#e8dfcb'
+            },
+            navy: {
+              headings: '#0a1430',
+              text: '#172445',
+              body: '#25355a',
+              muted: '#536487',
+              dim: '#8493b0',
+              card: 'rgba(255, 255, 255, 0.85)'
             },
             coral: {
               DEFAULT: '#ff6f59',
-              hover: '#ff836f',
-              dark: '#e55540',
-              soft: 'rgba(255, 111, 89, 0.14)',
-              glow: 'rgba(255, 111, 89, 0.35)'
+              hover: '#ff573d',
+              dark: '#e54c33',
+              soft: 'rgba(255, 111, 89, 0.12)',
+              glow: 'rgba(255, 111, 89, 0.28)'
             }
           },
           fontFamily: {
@@ -51,7 +52,7 @@
   </script>
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
-<body class="bg-navy-900 text-cream-200 font-body antialiased flex flex-col min-h-screen selection:bg-coral selection:text-navy-950">
+<body class="bg-cream-100 text-navy-body font-body antialiased flex flex-col min-h-screen selection:bg-coral selection:text-white">
 
   <!-- Snappy Top Reading Scroll Progress Indicator -->
   <div id="scroll-progress-bar"></div>
@@ -64,26 +65,26 @@
       <div class="flex items-center justify-between h-16">
         
         <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-coral/50 rounded-lg p-1">
-          <div class="w-9 h-9 rounded-lg bg-navy-800 border border-cream-100/15 text-coral flex items-center justify-center font-bold text-sm tracking-tight shadow-md group-hover:border-coral/40 group-hover:scale-105 transition duration-150">
+          <div class="w-9 h-9 rounded-lg bg-white border border-navy-headings/15 text-coral flex items-center justify-center font-bold text-sm tracking-tight shadow-sm group-hover:border-coral/50 group-hover:scale-105 transition duration-150">
             MK
           </div>
           <div>
-            <div class="font-display font-bold text-sm tracking-tight text-cream-100 group-hover:text-coral transition duration-150">
+            <div class="font-display font-bold text-sm tracking-tight text-navy-headings group-hover:text-coral transition duration-150">
               MOULISH KUMAR R
             </div>
-            <div class="text-[11px] font-medium text-cream-muted">
+            <div class="text-[11px] font-medium text-navy-muted">
               Mechanical Design &bull; Emerson Fisher
             </div>
           </div>
         </a>
 
         <nav class="hidden lg:flex items-center space-x-1 lg:space-x-2">
-          <a href="index.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Overview</a>
-          <a href="works.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Experience</a>
+          <a href="index.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Overview</a>
+          <a href="works.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Experience</a>
           <a href="projects.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-coral border-b-2 border-coral transition">Projects</a>
-          <a href="skills.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Skills</a>
-          <a href="education.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Education &amp; Awards</a>
-          <a href="contact.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Contact</a>
+          <a href="skills.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Skills</a>
+          <a href="education.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Education &amp; Awards</a>
+          <a href="contact.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Contact</a>
         </nav>
 
         <div class="hidden sm:flex items-center gap-3">
@@ -97,7 +98,7 @@
         </div>
 
         <div class="flex lg:hidden items-center gap-2">
-          <button id="mobile-menu-btn" class="p-2.5 text-cream-200 hover:text-coral rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40" aria-label="Toggle Navigation">
+          <button id="mobile-menu-btn" class="p-2.5 text-navy-headings hover:text-coral rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40" aria-label="Toggle Navigation">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
         </div>
@@ -105,13 +106,13 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-cream-100/10 bg-navy-950/95 backdrop-blur-xl px-4 pt-2 pb-5 space-y-1">
-      <a href="index.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Overview</a>
-      <a href="works.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Experience</a>
-      <a href="projects.html" class="block text-xs font-semibold uppercase tracking-wider text-coral bg-navy-800/80 border border-coral/30">Projects</a>
-      <a href="skills.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Skills</a>
-      <a href="education.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Education &amp; Awards</a>
-      <a href="contact.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Contact</a>
+    <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-navy-headings/10 bg-cream-50/98 backdrop-blur-xl px-4 pt-2 pb-5 space-y-1 shadow-lg">
+      <a href="index.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Overview</a>
+      <a href="works.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Experience</a>
+      <a href="projects.html" class="block text-xs font-semibold uppercase tracking-wider text-coral bg-white border border-coral/30 shadow-sm">Projects</a>
+      <a href="skills.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Skills</a>
+      <a href="education.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Education &amp; Awards</a>
+      <a href="contact.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Contact</a>
     </div>
   </header>
 
@@ -119,14 +120,14 @@
        HERO BANNER
        ========================================================================== -->
   <main class="flex-grow">
-    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-cream-100/10">
+    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="text-xs font-bold uppercase tracking-wider text-coral">RESEARCH &amp; THESIS PORTFOLIO</span>
-          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-cream-100 tracking-tight leading-tight mt-1">
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-headings tracking-tight leading-tight mt-1">
             Projects &amp; Dissertations
           </h1>
-          <p class="text-base sm:text-lg text-cream-300 mt-2 leading-relaxed">
+          <p class="text-base sm:text-lg text-navy-muted mt-2 leading-relaxed">
             Finite element modeling, materials characterization, and multi-domain structural optimization completed during M.Tech and B.Tech degrees. Full original PDF documentation available for direct download.
           </p>
         </div>
@@ -136,28 +137,28 @@
     <!-- ==========================================================================
          PROJECT 1: M.TECH DISSERTATION (STAGING THE FOCUS)
          ========================================================================== -->
-    <section class="py-14 bg-navy-900 border-b border-cream-100/10">
+    <section class="py-14 bg-cream-100 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="glass-card stage-focus p-6 sm:p-8">
           
-          <div class="flex flex-col lg:flex-row lg:items-start justify-between pb-6 mb-6 border-b border-cream-100/10 gap-4">
+          <div class="flex flex-col lg:flex-row lg:items-start justify-between pb-6 mb-6 border-b border-navy-headings/10 gap-4">
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-coral/15 text-coral text-xs font-bold border border-coral/30 uppercase tracking-wider">M.Tech Dissertation &bull; 84% Grade</span>
-                <span class="px-2.5 py-0.5 rounded-full bg-navy-800 text-cream-muted text-xs font-semibold border border-cream-100/15">BITS Pilani (WILP)</span>
-                <span class="px-2.5 py-0.5 rounded-full bg-navy-800 text-cream-muted text-xs font-semibold border border-cream-100/15">Conducted at L&amp;T Technology Services</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-coral/15 text-coral-dark text-xs font-bold border border-coral/30 uppercase tracking-wider">M.Tech Dissertation &bull; 84% Grade</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-white text-navy-muted text-xs font-semibold border border-navy-headings/10">BITS Pilani (WILP)</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-white text-navy-muted text-xs font-semibold border border-navy-headings/10">Conducted at L&amp;T Technology Services</span>
               </div>
-              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-cream-100">
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-navy-headings">
                 Multi-Domain Optimization of Automotive Leaf Springs
               </h2>
-              <div class="text-xs sm:text-sm text-cream-muted mt-1 font-mono">
+              <div class="text-xs sm:text-sm text-navy-muted mt-1 font-mono">
                 Structural Geometry &bull; Joint Architecture &bull; Hybrid Material Integration
               </div>
             </div>
             
             <a href="assets/docs/Leaf_Springs_MultiDomain_Optimization_Dissertation.pdf" target="_blank" class="fitts-button-primary shrink-0 text-xs">
-              <svg class="w-4 h-4 mr-1 text-navy-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <svg class="w-4 h-4 mr-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
               <span>Download 58-Page Thesis (PDF)</span>
             </a>
           </div>
@@ -166,34 +167,34 @@
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
             <div class="stat-box text-center">
               <div class="font-display font-extrabold text-2xl text-coral">75</div>
-              <div class="text-[11px] uppercase tracking-wider text-cream-muted mt-0.5">Configurations Evaluated</div>
-              <div class="text-[10px] text-cream-dim mt-0.5">Steel, Composite &amp; Hybrid</div>
+              <div class="text-[11px] uppercase tracking-wider text-navy-muted mt-0.5 font-semibold">Configurations Evaluated</div>
+              <div class="text-[10px] text-navy-dim mt-0.5">Steel, Composite &amp; Hybrid</div>
             </div>
             <div class="stat-box text-center">
               <div class="font-display font-extrabold text-2xl text-coral">-28%</div>
-              <div class="text-[11px] uppercase tracking-wider text-cream-muted mt-0.5">Simulated Weight Reduction</div>
-              <div class="text-[10px] text-cream-dim mt-0.5">Against 65Si7 Steel Reference</div>
+              <div class="text-[11px] uppercase tracking-wider text-navy-muted mt-0.5 font-semibold">Simulated Weight Reduction</div>
+              <div class="text-[10px] text-navy-dim mt-0.5">Against 65Si7 Steel Reference</div>
             </div>
             <div class="stat-box text-center">
               <div class="font-display font-extrabold text-2xl text-coral">+66%</div>
-              <div class="text-[11px] uppercase tracking-wider text-cream-muted mt-0.5">Higher Structural Stiffness</div>
-              <div class="text-[10px] text-cream-dim mt-0.5">Under Full Rated Axle Load</div>
+              <div class="text-[11px] uppercase tracking-wider text-navy-muted mt-0.5 font-semibold">Higher Structural Stiffness</div>
+              <div class="text-[10px] text-navy-dim mt-0.5">Under Full Rated Axle Load</div>
             </div>
             <div class="stat-box text-center">
-              <div class="font-display font-extrabold text-2xl text-cream-100">84%</div>
-              <div class="text-[11px] uppercase tracking-wider text-cream-muted mt-0.5">Dissertation Grade</div>
-              <div class="text-[10px] text-cream-dim mt-0.5">First Class with Distinction</div>
+              <div class="font-display font-extrabold text-2xl text-navy-headings">84%</div>
+              <div class="text-[11px] uppercase tracking-wider text-navy-muted mt-0.5 font-semibold">Dissertation Grade</div>
+              <div class="text-[10px] text-navy-dim mt-0.5">First Class with Distinction</div>
             </div>
           </div>
 
           <!-- Detailed Scientific Abstract & Methodology -->
-          <div class="space-y-4 text-xs sm:text-sm text-cream-300 leading-relaxed">
-            <div class="p-4 rounded-xl bg-navy-800/60 border border-cream-100/10 space-y-1">
+          <div class="space-y-4 text-xs sm:text-sm text-navy-body leading-relaxed">
+            <div class="p-4 rounded-xl bg-white border border-navy-headings/10 space-y-1 shadow-2xs">
               <strong class="text-coral block text-xs uppercase font-bold">Research Methodology &amp; Simulation Matrix</strong>
               <p>Investigated a comprehensive 75-run multi-domain matrix combining parabolic taper variations, eye-joint architectures (Berlin eye vs. wrapped eye), and advanced material combinations: structural steel (65Si7), S-glass/epoxy, Carbon/epoxy, and hybrid sandwich configurations. Analyzed under static, fatigue, and harmonic dynamic loading conditions.</p>
             </div>
 
-            <div class="p-4 rounded-xl bg-navy-800/60 border border-cream-100/10 space-y-1">
+            <div class="p-4 rounded-xl bg-white border border-navy-headings/10 space-y-1 shadow-2xs">
               <strong class="text-coral block text-xs uppercase font-bold">Recommended Engineering Concept &amp; Decision Matrix</strong>
               <p>Applied weighted Pugh selection across mass, stress distribution, delamination resistance, torsional rigidity, and manufacturing complexity. Selected an <strong>S-glass/epoxy-steel sandwich architecture</strong> with bonded interface pads, achieving an optimal balance of energy storage, cost feasibility, 28% weight reduction, and 66% increased stiffness.</p>
             </div>
@@ -207,10 +208,10 @@
     <!-- ==========================================================================
          PROJECTS 2 & 3: B.TECH MATERIALS & MANUFACTURING RESEARCH
          ========================================================================== -->
-    <section class="py-14 bg-navy-850 border-b border-cream-100/10">
+    <section class="py-14 bg-cream-200/70 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-cream-100 mb-8 pb-3 border-b border-cream-100/10">
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-navy-headings mb-8 pb-3 border-b border-navy-headings/10">
           Undergraduate Materials &amp; Composites Research
         </h2>
 
@@ -219,25 +220,25 @@
           <!-- Laser Shock Peening Project -->
           <div class="glass-card p-6 flex flex-col justify-between flow-reveal">
             <div>
-              <div class="flex items-center justify-between text-xs text-cream-muted mb-3">
+              <div class="flex items-center justify-between text-xs text-navy-muted mb-3">
                 <span class="text-coral font-bold tracking-wider uppercase">SASTRA UNIVERSITY &bull; MEC 300</span>
-                <span class="px-2 py-0.5 rounded bg-navy-800 text-cream-muted text-[10px] border border-cream-100/10">DEC 2021</span>
+                <span class="px-2 py-0.5 rounded bg-white text-navy-muted text-[10px] border border-navy-headings/10">DEC 2021</span>
               </div>
               
-              <h3 class="font-display text-xl font-bold text-cream-100 mb-2">
+              <h3 class="font-display text-xl font-bold text-navy-headings mb-2">
                 Laser Shock Peening on ZE41 Mg Alloy
               </h3>
-              <div class="text-xs text-cream-muted mb-4">Under guidance of Dr. Dinesh Babu P &bull; School of Mechanical Engineering</div>
+              <div class="text-xs text-navy-muted mb-4">Under guidance of Dr. Dinesh Babu P &bull; School of Mechanical Engineering</div>
 
-              <div class="space-y-3 text-xs sm:text-sm text-cream-300 leading-relaxed mb-6">
+              <div class="space-y-3 text-xs sm:text-sm text-navy-body leading-relaxed mb-6">
                 <p>
                   Investigated high-energy Nd:YAG pulsed laser shock peening (LSP) on lightweight aerospace-grade ZE41 magnesium alloy to assess surface microstructure modifications, dislocation density, and mechanical properties.
                 </p>
-                <div class="p-3 rounded-lg bg-navy-800/70 border border-coral/25 text-cream-100 flex items-center justify-between">
+                <div class="p-3 rounded-lg bg-white border border-coral/30 text-navy-headings flex items-center justify-between shadow-2xs">
                   <span class="font-semibold text-xs">Tensile Strength (UTS) Increase:</span>
                   <span class="text-coral font-bold text-sm">134 MPa &rarr; 168 MPa (+25.4%)</span>
                 </div>
-                <p class="text-xs text-cream-muted">
+                <p class="text-xs text-navy-muted">
                   Full 39-page original bonafide project report including microstructural hardness profiles, grain boundary modifications, and stress-strain curve analysis.
                 </p>
               </div>
@@ -252,31 +253,31 @@
           <!-- PLA Coir Fibre Stir Casting Project -->
           <div class="glass-card p-6 flex flex-col justify-between flow-reveal">
             <div>
-              <div class="flex items-center justify-between text-xs text-cream-muted mb-3">
+              <div class="flex items-center justify-between text-xs text-navy-muted mb-3">
                 <span class="text-coral font-bold tracking-wider uppercase">SASTRA UNIVERSITY &bull; MEC 400</span>
-                <span class="px-2 py-0.5 rounded bg-navy-800 text-cream-muted text-[10px] border border-cream-100/10">JUL 2022</span>
+                <span class="px-2 py-0.5 rounded bg-white text-navy-muted text-[10px] border border-navy-headings/10">JUL 2022</span>
               </div>
               
-              <h3 class="font-display text-xl font-bold text-cream-100 mb-2">
+              <h3 class="font-display text-xl font-bold text-navy-headings mb-2">
                 PLA Coir Fibre Polymer Composite via Stir Casting
               </h3>
-              <div class="text-xs text-cream-muted mb-4">Final Semester Major Project &bull; School of Mechanical Engineering</div>
+              <div class="text-xs text-navy-muted mb-4">Final Semester Major Project &bull; School of Mechanical Engineering</div>
 
-              <div class="space-y-3 text-xs sm:text-sm text-cream-300 leading-relaxed mb-6">
+              <div class="space-y-3 text-xs sm:text-sm text-navy-body leading-relaxed mb-6">
                 <p>
                   Fabricated and mechanically characterized bio-composite materials using polylactic acid (PLA) pellets and surface-treated chopped coir fiber reinforcement fabricated via stir casting process.
                 </p>
-                <div class="p-3 rounded-lg bg-navy-800/70 border border-cream-100/15 text-cream-100 space-y-1">
+                <div class="p-3 rounded-lg bg-white border border-navy-headings/10 text-navy-headings space-y-1 shadow-2xs">
                   <div class="flex justify-between text-xs">
-                    <span class="text-cream-muted">Fabrication Technique:</span>
-                    <span class="text-cream-100 font-semibold">Drum Stir Casting Equipment</span>
+                    <span class="text-navy-muted">Fabrication Technique:</span>
+                    <span class="text-navy-headings font-semibold">Drum Stir Casting Equipment</span>
                   </div>
                   <div class="flex justify-between text-xs">
-                    <span class="text-cream-muted">Testing Protocols:</span>
+                    <span class="text-navy-muted">Testing Protocols:</span>
                     <span class="text-coral font-semibold">Tensile, Impact &amp; SEM (250X)</span>
                   </div>
                 </div>
-                <p class="text-xs text-cream-muted">
+                <p class="text-xs text-navy-muted">
                   Full 45-page bonafide project report including stir casting parameter optimization, specimen molding, mechanical test results, and fracture surface SEM micrographs.
                 </p>
               </div>
@@ -296,13 +297,13 @@
     <!-- ==========================================================================
          WORKPLACE AUTOMATION & DIGITAL TOOLS PROJECTS
          ========================================================================== -->
-    <section class="py-14 bg-navy-900 border-b border-cream-100/10">
+    <section class="py-14 bg-cream-100 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-cream-100 mb-2">
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-navy-headings mb-2">
           Engineering Software &amp; Digital Tool Development
         </h2>
-        <p class="text-xs sm:text-sm text-cream-muted mb-8 max-w-3xl">
+        <p class="text-xs sm:text-sm text-navy-muted mb-8 max-w-3xl">
           Internal digital tools, scripts, and automation applications developed to eliminate engineering bottlenecks and boost drafting turnaround.
         </p>
 
@@ -310,26 +311,26 @@
           
           <div class="glass-card p-5 flow-reveal">
             <div class="text-xs font-bold text-coral uppercase tracking-wider mb-2">PYTHON TOOL</div>
-            <h3 class="font-display font-bold text-cream-100 text-sm mb-1">Drawing Comparison Software</h3>
-            <p class="text-xs text-cream-300 leading-relaxed">Automated pixel/vector difference analysis between legacy and revised 2D engineering drawings, accelerating review cycles for design checkers.</p>
+            <h3 class="font-display font-bold text-navy-headings text-sm mb-1">Drawing Comparison Software</h3>
+            <p class="text-xs text-navy-muted leading-relaxed">Automated pixel/vector difference analysis between legacy and revised 2D engineering drawings, accelerating review cycles for design checkers.</p>
           </div>
 
           <div class="glass-card p-5 flow-reveal">
             <div class="text-xs font-bold text-coral uppercase tracking-wider mb-2">LOW-CODE WORKFLOW</div>
-            <h3 class="font-display font-bold text-cream-100 text-sm mb-1">Microsoft Power Apps NPD Tracker</h3>
-            <p class="text-xs text-cream-300 leading-relaxed">Centralized application for tracking NPD project milestones, part development deliverables, and open action items across cross-functional engineering teams.</p>
+            <h3 class="font-display font-bold text-navy-headings text-sm mb-1">Microsoft Power Apps NPD Tracker</h3>
+            <p class="text-xs text-navy-muted leading-relaxed">Centralized application for tracking NPD project milestones, part development deliverables, and open action items across cross-functional engineering teams.</p>
           </div>
 
           <div class="glass-card p-5 flow-reveal">
             <div class="text-xs font-bold text-coral uppercase tracking-wider mb-2">CAD AUTOMATION</div>
-            <h3 class="font-display font-bold text-cream-100 text-sm mb-1">SolidWorks VBA Macros</h3>
-            <p class="text-xs text-cream-300 leading-relaxed">Custom macros automating repetitive drafting workflows, drawing template population, BOM balloon placement, and export formatting.</p>
+            <h3 class="font-display font-bold text-navy-headings text-sm mb-1">SolidWorks VBA Macros</h3>
+            <p class="text-xs text-navy-muted leading-relaxed">Custom macros automating repetitive drafting workflows, drawing template population, BOM balloon placement, and export formatting.</p>
           </div>
 
           <div class="glass-card p-5 flow-reveal">
             <div class="text-xs font-bold text-coral uppercase tracking-wider mb-2">WEB APPLICATION</div>
-            <h3 class="font-display font-bold text-cream-100 text-sm mb-1">Team Quiz Portal</h3>
-            <p class="text-xs text-cream-300 leading-relaxed">Web-based assessment portal engineered to reinforce technical standards, ASME valve codes, GD&amp;T definitions, and team technical competency.</p>
+            <h3 class="font-display font-bold text-navy-headings text-sm mb-1">Team Quiz Portal</h3>
+            <p class="text-xs text-navy-muted leading-relaxed">Web-based assessment portal engineered to reinforce technical standards, ASME valve codes, GD&amp;T definitions, and team technical competency.</p>
           </div>
 
         </div>
@@ -342,12 +343,12 @@
   <!-- ==========================================================================
        CLEAN GLASSMORPHIC FOOTER
        ========================================================================== -->
-  <footer class="bg-navy-950 border-t border-cream-100/10 py-8 text-xs text-cream-muted">
+  <footer class="bg-cream-200 border-t border-navy-headings/10 py-8 text-xs text-navy-muted">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
-          <div class="font-display font-bold text-cream-100 text-sm">MOULISH KUMAR R</div>
-          <div class="text-[11px] text-cream-muted mt-0.5">Projects &amp; Dissertations &bull; BITS Pilani &amp; SASTRA University</div>
+          <div class="font-display font-bold text-navy-headings text-sm">MOULISH KUMAR R</div>
+          <div class="text-[11px] text-navy-muted mt-0.5">Projects &amp; Dissertations &bull; BITS Pilani &amp; SASTRA University</div>
         </div>
         <div class="flex flex-wrap items-center gap-5">
           <a href="index.html" class="hover:text-coral transition">Overview</a>
@@ -357,7 +358,7 @@
           <a href="education.html" class="hover:text-coral transition">Education &amp; Awards</a>
           <a href="contact.html" class="hover:text-coral transition">Contact</a>
         </div>
-        <div class="text-[11px] text-cream-dim">
+        <div class="text-[11px] text-navy-dim">
           &copy; 2026 Moulish Kumar R.
         </div>
       </div>

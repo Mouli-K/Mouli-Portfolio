@@ -1,7 +1,7 @@
 /* ==========================================================================
    MOULISH KUMAR R - MECHANICAL DESIGN ENGINEER PORTFOLIO
-   Design Theme: Precision Glassmorphism in Navy, Cream & Radiant Coral
-   Color Ratio: 60% Navy Canvas | 30% Cream Lettering & Glass Surfaces | 10% Coral Accent
+   Design Theme: Precision Glassmorphism in Warm Cream & Deep Navy with Coral
+   Color Ratio: 60% Cream Canvas (Light Theme) | 30% Navy Lettering & Structure | 10% Coral Accent
    Typography: Plus Jakarta Sans (Headings), Inter (Precision Body & Data)
    UX Pillars: Staging the Focus, Snappy Timing, Fitts's Law Ergonomics
    ========================================================================== */
@@ -10,30 +10,30 @@
   --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* 60% Dominant Color: Deep Navy Canvas & Dark Glass Layers */
-  --color-navy-base: #070c1a;
-  --color-navy-bg: #0b132b;
-  --color-navy-surface: #101a38;
-  --color-navy-card: rgba(14, 25, 53, 0.72);
-  --color-navy-card-hover: rgba(21, 37, 77, 0.88);
-  --color-navy-elevated: #16244d;
-
-  /* 30% Sub Color: Warm Cream Typography & Refined Glass Accents */
-  --color-cream-100: #fdfbf7;
-  --color-cream-200: #f5eedf;
-  --color-cream-300: #ded3bc;
-  --color-cream-muted: #9e937d;
-  --color-cream-dim: #716958;
-  --glass-border: rgba(245, 238, 223, 0.12);
-  --glass-border-hover: rgba(245, 238, 223, 0.28);
-  --glass-highlight: rgba(255, 255, 255, 0.06);
+  /* 60% Dominant Color: Warm Cream Canvas & Frosted Glass Surfaces (Light Theme) */
+  --color-cream-base: #f5f0e6;
+  --color-cream-bg: #faf6ee;
+  --color-cream-surface: #fdfbf7;
+  --color-cream-subtle: #ede6d6;
+  --color-cream-card: rgba(255, 255, 255, 0.76);
+  --color-cream-card-hover: rgba(255, 255, 255, 0.95);
+  
+  /* 30% Sub Color: Deep Navy Lettering, Structure & Glass Borders */
+  --color-navy-headings: #0a1430;
+  --color-navy-text: #172445;
+  --color-navy-body: #25355a;
+  --color-navy-muted: #536487;
+  --color-navy-dim: #8493b0;
+  --glass-border: rgba(10, 20, 48, 0.1);
+  --glass-border-hover: rgba(255, 111, 89, 0.45);
+  --glass-highlight: rgba(255, 255, 255, 0.85);
 
   /* 10% Accent Color: Vibrant Coral for Maximum Visual Impact */
   --color-coral: #ff6f59;
-  --color-coral-hover: #ff8573;
-  --color-coral-dark: #e55540;
-  --color-coral-soft: rgba(255, 111, 89, 0.14);
-  --color-coral-glow: rgba(255, 111, 89, 0.38);
+  --color-coral-hover: #ff573d;
+  --color-coral-dark: #e54c33;
+  --color-coral-soft: rgba(255, 111, 89, 0.12);
+  --color-coral-glow: rgba(255, 111, 89, 0.28);
 
   /* Snappy Tactile Timing */
   --timing-snappy: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
@@ -45,13 +45,13 @@ html {
   scroll-behavior: smooth;
   max-width: 100%;
   overflow-x: hidden;
-  background-color: var(--color-navy-base);
+  background-color: var(--color-cream-base);
 }
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-navy-bg);
-  color: var(--color-cream-200);
+  background-color: var(--color-cream-bg);
+  color: var(--color-navy-text);
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -61,20 +61,20 @@ body {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* Engineering Blueprint Vector Grid Background */
+/* Engineering Blueprint Vector Grid Background on Warm Cream */
 .bg-blueprint-grid {
-  background-color: var(--color-navy-bg);
+  background-color: var(--color-cream-bg);
   background-image: 
-    radial-gradient(circle, rgba(245, 238, 223, 0.06) 1px, transparent 1px),
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 28px 28px, 140px 140px, 140px 140px;
+    radial-gradient(circle, rgba(10, 20, 48, 0.08) 1.2px, transparent 1.2px),
+    linear-gradient(to right, rgba(10, 20, 48, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 20, 48, 0.025) 1px, transparent 1px);
+  background-size: 26px 26px, 130px 130px, 130px 130px;
 }
 
 h1, h2, h3, h4, h5, .font-display {
   font-family: var(--font-display);
   letter-spacing: -0.025em;
-  color: var(--color-cream-100);
+  color: var(--color-navy-headings);
 }
 
 /* Snappy Top Reading Scroll Progress Bar with Radiant Coral Glow */
@@ -83,8 +83,8 @@ h1, h2, h3, h4, h5, .font-display {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(to right, #ff6f59, #ffa08f);
-  box-shadow: 0 0 12px rgba(255, 111, 89, 0.7);
+  background: linear-gradient(to right, #ff6f59, #ff9685);
+  box-shadow: 0 0 10px rgba(255, 111, 89, 0.6);
   z-index: 100;
   width: 0%;
   transition: width 0.08s linear;
@@ -92,20 +92,22 @@ h1, h2, h3, h4, h5, .font-display {
 
 /* Glassmorphism Header */
 .glass-header {
-  background: rgba(11, 19, 43, 0.85);
+  background: rgba(250, 246, 238, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--glass-border);
 }
 
-/* Glassmorphic Cards & Panels */
+/* Glassmorphic Cards & Panels on Warm Cream Canvas */
 .glass-card {
-  background: var(--color-navy-card);
+  background: var(--color-cream-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: 14px;
-  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px var(--glass-highlight);
+  box-shadow: 0 10px 25px -8px rgba(10, 20, 48, 0.07), 
+              0 2px 6px -1px rgba(10, 20, 48, 0.04), 
+              inset 0 1px 1px var(--glass-highlight);
   transition: transform var(--timing-snappy), 
               box-shadow var(--timing-snappy), 
               border-color var(--timing-snappy),
@@ -117,10 +119,10 @@ h1, h2, h3, h4, h5, .font-display {
   .glass-card:hover, .card-hover-pop:hover {
     transform: translateY(-4px);
     border-color: var(--glass-border-hover);
-    background: var(--color-navy-card-hover);
-    box-shadow: 0 20px 38px -12px rgba(0, 0, 0, 0.65), 
-                0 0 0 1px rgba(255, 111, 89, 0.25),
-                inset 0 1px 2px rgba(255, 255, 255, 0.08);
+    background: var(--color-cream-card-hover);
+    box-shadow: 0 18px 36px -10px rgba(10, 20, 48, 0.12), 
+                0 0 0 1px rgba(255, 111, 89, 0.3),
+                inset 0 1px 2px rgba(255, 255, 255, 1);
   }
 }
 
@@ -137,10 +139,11 @@ h1, h2, h3, h4, h5, .font-display {
    ========================================================================== */
 .stage-focus {
   position: relative;
-  border-color: rgba(255, 111, 89, 0.45) !important;
-  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.6), 
-              0 0 24px -4px rgba(255, 111, 89, 0.22),
-              inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(255, 111, 89, 0.5) !important;
+  box-shadow: 0 16px 36px -10px rgba(10, 20, 48, 0.12), 
+              0 0 20px -2px rgba(255, 111, 89, 0.2),
+              inset 0 1px 1px #ffffff !important;
 }
 
 .stage-focus::before {
@@ -152,16 +155,11 @@ h1, h2, h3, h4, h5, .font-display {
   bottom: -1px;
   border-radius: 14px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 111, 89, 0.6), rgba(245, 238, 223, 0.1) 40%, rgba(255, 111, 89, 0.4));
+  background: linear-gradient(135deg, rgba(255, 111, 89, 0.7), rgba(10, 20, 48, 0.08) 40%, rgba(255, 111, 89, 0.5));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-}
-
-/* Focused Spotlight Aura */
-.focus-glow {
-  box-shadow: 0 0 35px -5px rgba(255, 111, 89, 0.35);
 }
 
 /* ==========================================================================
@@ -179,8 +177,8 @@ h1, h2, h3, h4, h5, .font-display {
   font-weight: 600;
   border-radius: 10px;
   background-color: var(--color-coral);
-  color: #0b132b;
-  box-shadow: 0 4px 16px rgba(255, 111, 89, 0.32);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 111, 89, 0.35);
   transition: all var(--timing-snappy);
   cursor: pointer;
   text-decoration: none;
@@ -189,9 +187,9 @@ h1, h2, h3, h4, h5, .font-display {
 
 .fitts-button-primary:hover {
   background-color: var(--color-coral-hover);
-  color: #050a17;
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 111, 89, 0.45);
+  box-shadow: 0 8px 22px rgba(255, 111, 89, 0.45);
 }
 
 .fitts-button-primary:active {
@@ -207,22 +205,24 @@ h1, h2, h3, h4, h5, .font-display {
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 10px;
-  background: rgba(245, 238, 223, 0.07);
-  color: var(--color-cream-100);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-navy-headings);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(12px);
+  box-shadow: 0 2px 6px rgba(10, 20, 48, 0.04);
   transition: all var(--timing-snappy);
   cursor: pointer;
   text-decoration: none;
 }
 
 .fitts-button-secondary:hover {
-  background: rgba(245, 238, 223, 0.14);
-  color: var(--color-cream-100);
-  border-color: var(--glass-border-hover);
+  background: #ffffff;
+  color: var(--color-coral);
+  border-color: rgba(255, 111, 89, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10, 20, 48, 0.08);
 }
 
 .fitts-button-secondary:active {
@@ -241,7 +241,7 @@ h1, h2, h3, h4, h5, .font-display {
 }
 
 #mobile-nav-drawer a:active {
-  background: rgba(255, 111, 89, 0.15);
+  background: rgba(255, 111, 89, 0.12);
   color: var(--color-coral);
 }
 
@@ -254,8 +254,8 @@ h1, h2, h3, h4, h5, .font-display {
   font-size: 0.75rem;
   font-weight: 500;
   border-radius: 9999px;
-  background-color: rgba(245, 238, 223, 0.08);
-  color: var(--color-cream-200);
+  background-color: rgba(255, 255, 255, 0.75);
+  color: var(--color-navy-text);
   border: 1px solid var(--glass-border);
   transition: all var(--timing-snappy);
 }
@@ -269,28 +269,31 @@ h1, h2, h3, h4, h5, .font-display {
   font-weight: 600;
   border-radius: 9999px;
   background-color: var(--color-coral-soft);
-  color: var(--color-coral);
-  border: 1px solid rgba(255, 111, 89, 0.3);
+  color: var(--color-coral-dark);
+  border: 1px solid rgba(255, 111, 89, 0.35);
 }
 
 .badge-pill:hover {
-  background-color: rgba(255, 111, 89, 0.14);
-  color: var(--color-coral);
-  border-color: rgba(255, 111, 89, 0.35);
+  background-color: #ffffff;
+  color: var(--color-coral-dark);
+  border-color: rgba(255, 111, 89, 0.4);
 }
 
 /* Stat Highlight Box */
 .stat-box {
-  background: rgba(14, 25, 53, 0.55);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 1rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(10, 20, 48, 0.04);
   transition: all var(--timing-snappy);
 }
 
 .stat-box:hover {
-  border-color: rgba(255, 111, 89, 0.3);
-  background: rgba(21, 37, 77, 0.75);
+  border-color: rgba(255, 111, 89, 0.35);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(10, 20, 48, 0.08);
 }
 
 /* Page Entrance Animation */
@@ -322,11 +325,11 @@ main {
   transform: translateY(0);
 }
 
-/* Form Controls with Cream & Coral Accents */
+/* Form Controls */
 input, textarea, select {
   font-family: var(--font-body);
-  background: rgba(10, 18, 40, 0.75) !important;
-  color: var(--color-cream-100) !important;
+  background: #ffffff !important;
+  color: var(--color-navy-headings) !important;
   border: 1px solid var(--glass-border) !important;
   border-radius: 8px;
   transition: border-color var(--timing-snappy), box-shadow var(--timing-snappy);
@@ -334,7 +337,7 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   border-color: var(--color-coral) !important;
-  box-shadow: 0 0 0 3px rgba(255, 111, 89, 0.25) !important;
+  box-shadow: 0 0 0 3px rgba(255, 111, 89, 0.22) !important;
   outline: none;
 }
 

@@ -18,27 +18,28 @@
       theme: {
         extend: {
           colors: {
-            navy: {
-              950: '#070c1a',
-              900: '#0b132b',
-              850: '#0e1838',
-              800: '#14234d',
-              700: '#1c3166'
-            },
             cream: {
               50: '#fdfbf7',
-              100: '#f7f2e7',
-              200: '#ede4d1',
-              300: '#dcd0b8',
-              400: '#b8aa90',
-              muted: '#9e937d'
+              100: '#faf6ee',
+              200: '#f5f0e6',
+              300: '#ede6d6',
+              400: '#ded4c0',
+              subtle: '#e8dfcb'
+            },
+            navy: {
+              headings: '#0a1430',
+              text: '#172445',
+              body: '#25355a',
+              muted: '#536487',
+              dim: '#8493b0',
+              card: 'rgba(255, 255, 255, 0.85)'
             },
             coral: {
               DEFAULT: '#ff6f59',
-              hover: '#ff836f',
-              dark: '#e55540',
-              soft: 'rgba(255, 111, 89, 0.14)',
-              glow: 'rgba(255, 111, 89, 0.35)'
+              hover: '#ff573d',
+              dark: '#e54c33',
+              soft: 'rgba(255, 111, 89, 0.12)',
+              glow: 'rgba(255, 111, 89, 0.28)'
             }
           },
           fontFamily: {
@@ -51,7 +52,7 @@
   </script>
   <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
-<body class="bg-navy-900 text-cream-200 font-body antialiased flex flex-col min-h-screen selection:bg-coral selection:text-navy-950">
+<body class="bg-cream-100 text-navy-body font-body antialiased flex flex-col min-h-screen selection:bg-coral selection:text-white">
 
   <!-- Snappy Top Reading Scroll Progress Indicator -->
   <div id="scroll-progress-bar"></div>
@@ -64,26 +65,26 @@
       <div class="flex items-center justify-between h-16">
         
         <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-coral/50 rounded-lg p-1">
-          <div class="w-9 h-9 rounded-lg bg-navy-800 border border-cream-100/15 text-coral flex items-center justify-center font-bold text-sm tracking-tight shadow-md group-hover:border-coral/40 group-hover:scale-105 transition duration-150">
+          <div class="w-9 h-9 rounded-lg bg-white border border-navy-headings/15 text-coral flex items-center justify-center font-bold text-sm tracking-tight shadow-sm group-hover:border-coral/50 group-hover:scale-105 transition duration-150">
             MK
           </div>
           <div>
-            <div class="font-display font-bold text-sm tracking-tight text-cream-100 group-hover:text-coral transition duration-150">
+            <div class="font-display font-bold text-sm tracking-tight text-navy-headings group-hover:text-coral transition duration-150">
               MOULISH KUMAR R
             </div>
-            <div class="text-[11px] font-medium text-cream-muted">
+            <div class="text-[11px] font-medium text-navy-muted">
               Mechanical Design &bull; Emerson Fisher
             </div>
           </div>
         </a>
 
         <nav class="hidden lg:flex items-center space-x-1 lg:space-x-2">
-          <a href="index.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Overview</a>
-          <a href="works.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Experience</a>
-          <a href="projects.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Projects</a>
-          <a href="skills.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Skills</a>
+          <a href="index.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Overview</a>
+          <a href="works.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Experience</a>
+          <a href="projects.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Projects</a>
+          <a href="skills.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Skills</a>
           <a href="education.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-coral border-b-2 border-coral transition">Education &amp; Awards</a>
-          <a href="contact.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-cream-muted hover:text-coral transition">Contact</a>
+          <a href="contact.html" class="nav-link px-3 py-2 text-xs font-semibold uppercase tracking-wider text-navy-muted hover:text-coral transition">Contact</a>
         </nav>
 
         <div class="hidden sm:flex items-center gap-3">
@@ -97,7 +98,7 @@
         </div>
 
         <div class="flex lg:hidden items-center gap-2">
-          <button id="mobile-menu-btn" class="p-2.5 text-cream-200 hover:text-coral rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40" aria-label="Toggle Navigation">
+          <button id="mobile-menu-btn" class="p-2.5 text-navy-headings hover:text-coral rounded-lg focus:outline-none focus:ring-2 focus:ring-coral/40" aria-label="Toggle Navigation">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
           </button>
         </div>
@@ -105,13 +106,13 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-cream-100/10 bg-navy-950/95 backdrop-blur-xl px-4 pt-2 pb-5 space-y-1">
-      <a href="index.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Overview</a>
-      <a href="works.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Experience</a>
-      <a href="projects.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Projects</a>
-      <a href="skills.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Skills</a>
-      <a href="education.html" class="block text-xs font-semibold uppercase tracking-wider text-coral bg-navy-800/80 border border-coral/30">Education &amp; Awards</a>
-      <a href="contact.html" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 hover:text-coral hover:bg-navy-800/50">Contact</a>
+    <div id="mobile-nav-drawer" class="hidden lg:hidden border-b border-navy-headings/10 bg-cream-50/98 backdrop-blur-xl px-4 pt-2 pb-5 space-y-1 shadow-lg">
+      <a href="index.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Overview</a>
+      <a href="works.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Experience</a>
+      <a href="projects.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Projects</a>
+      <a href="skills.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Skills</a>
+      <a href="education.html" class="block text-xs font-semibold uppercase tracking-wider text-coral bg-white border border-coral/30 shadow-sm">Education &amp; Awards</a>
+      <a href="contact.html" class="block text-xs font-semibold uppercase tracking-wider text-navy-body hover:text-coral hover:bg-white/60">Contact</a>
     </div>
   </header>
 
@@ -119,14 +120,14 @@
        HERO BANNER
        ========================================================================== -->
   <main class="flex-grow">
-    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-cream-100/10">
+    <section class="bg-blueprint-grid py-12 md:py-16 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="text-xs font-bold uppercase tracking-wider text-coral">ACADEMIC FOUNDATION &amp; HONORS</span>
-          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-cream-100 tracking-tight leading-tight mt-1">
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-headings tracking-tight leading-tight mt-1">
             Education, Honors &amp; Certifications
           </h1>
-          <p class="text-base sm:text-lg text-cream-300 mt-2 leading-relaxed">
+          <p class="text-base sm:text-lg text-navy-muted mt-2 leading-relaxed">
             Postgraduate M.Tech in Design Engineering with distinction from BITS Pilani, B.Tech from SASTRA, certified professional credentials, and company awards.
           </p>
         </div>
@@ -136,10 +137,10 @@
     <!-- ==========================================================================
          ACADEMIC DEGREES (STAGED FOCUS)
          ========================================================================== -->
-    <section class="py-14 bg-navy-900 border-b border-cream-100/10">
+    <section class="py-14 bg-cream-100 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 class="font-display text-2xl font-bold text-cream-100 mb-8 pb-3 border-b border-cream-100/10">
+        <h2 class="font-display text-2xl font-bold text-navy-headings mb-8 pb-3 border-b border-navy-headings/10">
           Academic Degrees
         </h2>
 
@@ -147,66 +148,66 @@
           
           <!-- Degree 1: M.Tech BITS Pilani (Staged Focus) -->
           <div class="glass-card stage-focus p-6 sm:p-8">
-            <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-cream-100/10 gap-4">
+            <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-navy-headings/10 gap-4">
               <div>
                 <span class="text-xs text-coral font-bold uppercase tracking-wider">POST-GRADUATE DEGREE &bull; WILP (PART TIME)</span>
-                <h3 class="font-display text-xl sm:text-2xl font-bold text-cream-100 mt-0.5">
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-navy-headings mt-0.5">
                   M.Tech in Design Engineering
                 </h3>
-                <div class="text-xs sm:text-sm text-cream-300 mt-0.5">
+                <div class="text-xs sm:text-sm text-navy-muted mt-0.5">
                   <strong>Birla Institute of Technology &amp; Science (BITS Pilani)</strong> &bull; Pilani, Rajasthan
                 </div>
               </div>
               <div class="flex flex-col items-start md:items-end">
-                <span class="px-3 py-1 rounded-full bg-coral/15 text-coral text-xs font-bold border border-coral/30">
+                <span class="px-3 py-1 rounded-full bg-coral/15 text-coral-dark text-xs font-bold border border-coral/30">
                   Completed 2026 &bull; 84% Grade
                 </span>
-                <span class="text-[11px] text-cream-muted mt-1 font-medium">First Class with Distinction</span>
+                <span class="text-[11px] text-navy-muted mt-1 font-medium">First Class with Distinction</span>
               </div>
             </div>
 
-            <div class="text-xs sm:text-sm text-cream-300 space-y-3 leading-relaxed">
+            <div class="text-xs sm:text-sm text-navy-body space-y-3 leading-relaxed">
               <p>Specialization in Mechanics of Solids, Finite Element Analysis (FEA), Structural Optimization, Materials Characterization, and Advanced Machine Design.</p>
               
-              <div class="p-4 rounded-xl bg-navy-800/60 border border-coral/25 text-xs space-y-1">
+              <div class="p-4 rounded-xl bg-white border border-coral/30 text-xs space-y-1 shadow-2xs">
                 <strong class="text-coral block uppercase font-semibold">Dissertation Research at L&amp;T Technology Services:</strong>
-                <p class="text-cream-100 italic">"Multi-Domain Optimization of Automotive Leaf Springs via Structural Geometry, Joint Architecture, and Hybrid Material Integration"</p>
-                <div class="text-cream-muted pt-1">Evaluated 75 configurations combining S-glass/epoxy composites and steel; recommended hybrid sandwich concept with 28% simulated weight reduction and 66% higher stiffness.</div>
+                <p class="text-navy-headings italic">"Multi-Domain Optimization of Automotive Leaf Springs via Structural Geometry, Joint Architecture, and Hybrid Material Integration"</p>
+                <div class="text-navy-muted pt-1">Evaluated 75 configurations combining S-glass/epoxy composites and steel; recommended hybrid sandwich concept with 28% simulated weight reduction and 66% higher stiffness.</div>
               </div>
             </div>
           </div>
 
           <!-- Degree 2: B.Tech SASTRA -->
           <div class="glass-card p-6 sm:p-8">
-            <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-cream-100/10 gap-4">
+            <div class="flex flex-col md:flex-row md:items-start justify-between pb-4 mb-4 border-b border-navy-headings/10 gap-4">
               <div>
-                <span class="text-xs text-cream-muted font-bold uppercase tracking-wider">UNDERGRADUATE DEGREE</span>
-                <h3 class="font-display text-xl sm:text-2xl font-bold text-cream-100 mt-0.5">
+                <span class="text-xs text-navy-muted font-bold uppercase tracking-wider">UNDERGRADUATE DEGREE</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-navy-headings mt-0.5">
                   B.Tech in Mechanical Engineering
                 </h3>
-                <div class="text-xs sm:text-sm text-cream-300 mt-0.5">
+                <div class="text-xs sm:text-sm text-navy-muted mt-0.5">
                   <strong>SASTRA Deemed to be University</strong> &bull; School of Mechanical Engineering &bull; Thanjavur, Tamil Nadu
                 </div>
               </div>
               <div class="flex flex-col items-start md:items-end">
-                <span class="px-3 py-1 rounded-full bg-navy-800 text-cream-100 text-xs font-bold border border-cream-100/15">
+                <span class="px-3 py-1 rounded-full bg-white text-navy-headings text-xs font-bold border border-navy-headings/15 shadow-2xs">
                   Completed 2022 &bull; 78% Grade
                 </span>
-                <span class="text-[11px] text-cream-muted mt-1 font-medium">First Class</span>
+                <span class="text-[11px] text-navy-muted mt-1 font-medium">First Class</span>
               </div>
             </div>
 
-            <div class="text-xs sm:text-sm text-cream-300 space-y-3 leading-relaxed">
+            <div class="text-xs sm:text-sm text-navy-body space-y-3 leading-relaxed">
               <p>Coursework in Machine Design, Solid Mechanics, Thermodynamics, Fluid Dynamics, Metrology &amp; Quality Control, CAD/CAM, and Manufacturing Processes.</p>
               
               <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs">
-                <div class="p-3 rounded-lg bg-navy-800/50 border border-cream-100/10">
-                  <strong class="text-cream-100 block font-semibold">MEC 400 Major Project:</strong>
-                  <div class="text-cream-300 mt-0.5">PLA Coir Fibre Polymer Composite via Stir Casting Process.</div>
+                <div class="p-3 rounded-lg bg-white border border-navy-headings/10 shadow-2xs">
+                  <strong class="text-navy-headings block font-semibold">MEC 400 Major Project:</strong>
+                  <div class="text-navy-muted mt-0.5">PLA Coir Fibre Polymer Composite via Stir Casting Process.</div>
                 </div>
-                <div class="p-3 rounded-lg bg-navy-800/50 border border-cream-100/10">
-                  <strong class="text-cream-100 block font-semibold">MEC 300 Mini Project:</strong>
-                  <div class="text-cream-300 mt-0.5">Laser Shock Peening on ZE41 Mg Alloy (UTS +25.4%).</div>
+                <div class="p-3 rounded-lg bg-white border border-navy-headings/10 shadow-2xs">
+                  <strong class="text-navy-headings block font-semibold">MEC 300 Mini Project:</strong>
+                  <div class="text-navy-muted mt-0.5">Laser Shock Peening on ZE41 Mg Alloy (UTS +25.4%).</div>
                 </div>
               </div>
             </div>
@@ -220,10 +221,10 @@
     <!-- ==========================================================================
          PROFESSIONAL CERTIFICATIONS
          ========================================================================== -->
-    <section class="py-14 bg-navy-850 border-b border-cream-100/10">
+    <section class="py-14 bg-cream-200/70 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 class="font-display text-2xl font-bold text-cream-100 mb-8 pb-3 border-b border-cream-100/10">
+        <h2 class="font-display text-2xl font-bold text-navy-headings mb-8 pb-3 border-b border-navy-headings/10">
           Professional Certifications
         </h2>
 
@@ -231,20 +232,20 @@
           
           <!-- CSWP -->
           <div class="glass-card p-6 flow-reveal">
-            <div class="flex items-center justify-between text-xs text-cream-muted mb-2">
+            <div class="flex items-center justify-between text-xs text-navy-muted mb-2">
               <span class="text-coral font-bold tracking-wider">DASSAULT SYSTÈMES</span>
               <span>GLOBAL CREDENTIAL</span>
             </div>
-            <h3 class="font-display font-bold text-cream-100 text-lg mb-2">
+            <h3 class="font-display font-bold text-navy-headings text-lg mb-2">
               Certified SolidWorks Professional (CSWP)
             </h3>
-            <p class="text-xs sm:text-sm text-cream-300 leading-relaxed mb-4">
+            <p class="text-xs sm:text-sm text-navy-body leading-relaxed mb-4">
               Demonstrated proficiency in parametric mechanical part design, configuration modification, complex assembly mates, mass properties calculation, and multi-component drawing creation.
             </p>
-            <div class="pt-3 border-t border-cream-100/10 flex items-center justify-between text-xs text-cream-muted">
+            <div class="pt-3 border-t border-navy-headings/10 flex items-center justify-between text-xs text-navy-muted">
               <span>Standard: CSWP Core</span>
-              <span class="text-emerald-400 font-semibold flex items-center gap-1">
-                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-emerald-700 font-semibold flex items-center gap-1">
+                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 <span>Active Credential</span>
               </span>
             </div>
@@ -252,20 +253,20 @@
 
           <!-- ASME GD&T -->
           <div class="glass-card p-6 flow-reveal">
-            <div class="flex items-center justify-between text-xs text-cream-muted mb-2">
+            <div class="flex items-center justify-between text-xs text-navy-muted mb-2">
               <span class="text-coral font-bold tracking-wider">ACADEMIX / EGS COMPUTERS</span>
               <span>SEP 2026</span>
             </div>
-            <h3 class="font-display font-bold text-cream-100 text-lg mb-2">
+            <h3 class="font-display font-bold text-navy-headings text-lg mb-2">
               ASME Y14.5 GD&amp;T Certification
             </h3>
-            <p class="text-xs sm:text-sm text-cream-300 leading-relaxed mb-4">
+            <p class="text-xs sm:text-sm text-navy-body leading-relaxed mb-4">
               Formal certification in ASME Y14.5 Geometric Dimensioning &amp; Tolerancing: Feature control frames, datum reference frames, material condition modifiers (MMC/LMC), and tolerance stack-up analysis.
             </p>
-            <div class="pt-3 border-t border-cream-100/10 flex items-center justify-between text-xs text-cream-muted">
+            <div class="pt-3 border-t border-navy-headings/10 flex items-center justify-between text-xs text-navy-muted">
               <span>Standard: ASME Y14.5</span>
-              <span class="text-emerald-400 font-semibold flex items-center gap-1">
-                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-emerald-700 font-semibold flex items-center gap-1">
+                <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 <span>Certified Specialist</span>
               </span>
             </div>
@@ -279,10 +280,10 @@
     <!-- ==========================================================================
          AWARDS & RECOGNITION
          ========================================================================== -->
-    <section class="py-14 bg-navy-900 border-b border-cream-100/10">
+    <section class="py-14 bg-cream-100 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 class="font-display text-2xl font-bold text-cream-100 mb-8 pb-3 border-b border-cream-100/10">
+        <h2 class="font-display text-2xl font-bold text-navy-headings mb-8 pb-3 border-b border-navy-headings/10">
           Honors &amp; Recognition
         </h2>
 
@@ -290,28 +291,28 @@
           
           <!-- Emerson EDGE Award -->
           <div class="glass-card p-6 border-coral/30 flow-reveal">
-            <div class="flex items-center justify-between pb-3 mb-3 border-cream-100/10 border-b">
+            <div class="flex items-center justify-between pb-3 mb-3 border-navy-headings/10 border-b">
               <span class="badge-coral">★ Emerson EDGE Award</span>
-              <span class="text-xs font-medium text-cream-muted">Fisher Control Valves</span>
+              <span class="text-xs font-medium text-navy-muted">Fisher Control Valves</span>
             </div>
-            <h3 class="font-display font-bold text-cream-100 text-lg mb-2">
+            <h3 class="font-display font-bold text-navy-headings text-lg mb-2">
               EDGE Award for Engineering Excellence
             </h3>
-            <p class="text-xs sm:text-sm text-cream-300 leading-relaxed">
+            <p class="text-xs sm:text-sm text-navy-body leading-relaxed">
               Awarded at Emerson in recognition of engineering excellence, technical initiative, and driving high-impact deliverables across New Product Development (NPD) valve programs.
             </p>
           </div>
 
           <!-- LTTS OpenHack Award -->
           <div class="glass-card p-6 border-coral/30 flow-reveal">
-            <div class="flex items-center justify-between pb-3 mb-3 border-cream-100/10 border-b">
+            <div class="flex items-center justify-between pb-3 mb-3 border-navy-headings/10 border-b">
               <span class="badge-coral">★ LTTS OpenHack Award</span>
-              <span class="text-xs font-medium text-cream-muted">LTTS OpenHack</span>
+              <span class="text-xs font-medium text-navy-muted">LTTS OpenHack</span>
             </div>
-            <h3 class="font-display font-bold text-cream-100 text-lg mb-2">
+            <h3 class="font-display font-bold text-navy-headings text-lg mb-2">
               Employees' Choice Award for Innovative Solution
             </h3>
-            <p class="text-xs sm:text-sm text-cream-300 leading-relaxed">
+            <p class="text-xs sm:text-sm text-navy-body leading-relaxed">
               Voted by engineering peers and management across L&amp;T Technology Services for developing an innovative technical concept demonstrating exceptional problem-solving and collaboration.
             </p>
           </div>
@@ -324,10 +325,10 @@
     <!-- ==========================================================================
          HOBBIES (DIRECT FROM 2026 RESUME)
          ========================================================================== -->
-    <section class="py-12 bg-navy-850 border-b border-cream-100/10">
+    <section class="py-12 bg-cream-200/70 border-b border-navy-headings/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <h2 class="font-display text-xl font-bold text-cream-100 mb-6 flex items-center gap-2">
+        <h2 class="font-display text-xl font-bold text-navy-headings mb-6 flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-coral"></span>
           <span>Interests &amp; Hobbies</span>
         </h2>
@@ -338,24 +339,24 @@
             <div class="w-10 h-10 rounded-full bg-coral/15 text-coral flex items-center justify-center mx-auto mb-3">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
             </div>
-            <div class="font-display font-bold text-cream-100 text-sm">Classic Literature</div>
-            <p class="text-xs text-cream-muted mt-1">Deep reader of philosophy, world classics, and historical narratives.</p>
+            <div class="font-display font-bold text-navy-headings text-sm">Classic Literature</div>
+            <p class="text-xs text-navy-muted mt-1">Deep reader of philosophy, world classics, and historical narratives.</p>
           </div>
 
           <div class="glass-card p-5 text-center flow-reveal">
             <div class="w-10 h-10 rounded-full bg-coral/15 text-coral flex items-center justify-center mx-auto mb-3">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
             </div>
-            <div class="font-display font-bold text-cream-100 text-sm">Video Games</div>
-            <p class="text-xs text-cream-muted mt-1">Engaging with interactive storytelling, mechanical puzzle design, and game theory.</p>
+            <div class="font-display font-bold text-navy-headings text-sm">Video Games</div>
+            <p class="text-xs text-navy-muted mt-1">Engaging with interactive storytelling, mechanical puzzle design, and game theory.</p>
           </div>
 
           <div class="glass-card p-5 text-center flow-reveal">
             <div class="w-10 h-10 rounded-full bg-coral/15 text-coral flex items-center justify-center mx-auto mb-3">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
             </div>
-            <div class="font-display font-bold text-cream-100 text-sm">Coding &amp; Automation</div>
-            <p class="text-xs text-cream-muted mt-1">Python script engineering, CAD macro automation, and building web utilities.</p>
+            <div class="font-display font-bold text-navy-headings text-sm">Coding &amp; Automation</div>
+            <p class="text-xs text-navy-muted mt-1">Python script engineering, CAD macro automation, and building web utilities.</p>
           </div>
 
         </div>
@@ -368,12 +369,12 @@
   <!-- ==========================================================================
        CLEAN GLASSMORPHIC FOOTER
        ========================================================================== -->
-  <footer class="bg-navy-950 border-t border-cream-100/10 py-8 text-xs text-cream-muted">
+  <footer class="bg-cream-200 border-t border-navy-headings/10 py-8 text-xs text-navy-muted">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
-          <div class="font-display font-bold text-cream-100 text-sm">MOULISH KUMAR R</div>
-          <div class="text-[11px] text-cream-muted mt-0.5">Education &amp; Credentials &bull; BITS Pilani (84%) &bull; SASTRA (78%) &bull; CSWP</div>
+          <div class="font-display font-bold text-navy-headings text-sm">MOULISH KUMAR R</div>
+          <div class="text-[11px] text-navy-muted mt-0.5">Education &amp; Credentials &bull; BITS Pilani (84%) &bull; SASTRA (78%) &bull; CSWP</div>
         </div>
         <div class="flex flex-wrap items-center gap-5">
           <a href="index.html" class="hover:text-coral transition">Overview</a>
@@ -383,7 +384,7 @@
           <a href="education.html" class="text-coral font-semibold">Education &amp; Awards</a>
           <a href="contact.html" class="hover:text-coral transition">Contact</a>
         </div>
-        <div class="text-[11px] text-cream-dim">
+        <div class="text-[11px] text-navy-dim">
           &copy; 2026 Moulish Kumar R.
         </div>
       </div>
